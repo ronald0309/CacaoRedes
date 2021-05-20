@@ -1,0 +1,15 @@
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\bin\Debug\netcoreapp3.1\Cacao.exe
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\bin\Debug\netcoreapp3.1\Cacao.deps.json
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\bin\Debug\netcoreapp3.1\Cacao.runtimeconfig.json
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\bin\Debug\netcoreapp3.1\Cacao.runtimeconfig.dev.json
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\bin\Debug\netcoreapp3.1\Cacao.dll
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\bin\Debug\netcoreapp3.1\Cacao.pdb
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.csprojAssemblyReference.cache
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.Form1.resources
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.csproj.GenerateResource.cache
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.AssemblyInfoInputs.cache
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.AssemblyInfo.cs
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.csproj.CoreCompileInputs.cache
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.dll
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.pdb
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.genruntimeconfig.cache
