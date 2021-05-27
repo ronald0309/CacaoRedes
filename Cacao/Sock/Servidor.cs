@@ -41,7 +41,7 @@ namespace Cacao.Sock
                 
 37
                 cerrarlo je*/
-                MessageBox.Show("Conectado");
+                MessageBox.Show("Conectado Servidor");
                 miPrimerSocket.Close(); //Luego lo cerramos
             }
             catch (Exception error)

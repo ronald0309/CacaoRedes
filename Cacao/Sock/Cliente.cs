@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Net;            //   Paso 1
 using System.Net.Sockets;    //   Paso 1
 using System.Windows.Forms;
-
+using System.Threading;
 namespace Cacao.Sock
 {
     class Cliente
@@ -30,7 +30,7 @@ namespace Cacao.Sock
             {
                 miPrimerSocket.Connect(miDireccion); // Conectamos                
                 Console.WriteLine("Conectado con exito");
-                MessageBox.Show("Conectado");
+                MessageBox.Show("Conectado Cliente");
                 miPrimerSocket.Close();
             }
             catch (Exception error)

@@ -8,13 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Cacao.Sock;
+using Cacao.Clases;
 namespace Cacao
 {
-    public partial class Form1 : Form
+    public partial class Menu : Form
     {
-        public Form1()
+        public Menu()
         {
+
             InitializeComponent();
+            Monedas monedas = new Monedas();
+            this.Controls.Add(monedas);
         }
 
         private void button1_Click(object sender, EventArgs e)
