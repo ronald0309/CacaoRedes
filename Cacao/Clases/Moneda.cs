@@ -6,11 +6,12 @@ using System.Windows.Forms;
 
 namespace Cacao.Clases
 {
-    class Monedas: PictureBox
+    class Moneda: PictureBox
     {
-        public Monedas()
+        public Moneda()
         {
-            Image = System.Drawing.Image.FromFile("../Moneda.jpg");
+          
+            ImageLocation = @"\Recursos\Moneda.jpg";
             Location = new System.Drawing.Point(15, 15);
         }
     }

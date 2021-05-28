@@ -29,30 +29,30 @@ namespace Cacao
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCrear = new System.Windows.Forms.Button();
+            this.btnUnirse = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btnCrear
             // 
-            this.button1.Location = new System.Drawing.Point(103, 542);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(286, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Crear partida";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCrear.Location = new System.Drawing.Point(103, 542);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(286, 23);
+            this.btnCrear.TabIndex = 0;
+            this.btnCrear.Text = "Crear partida";
+            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.ActCrear);
             // 
-            // button2
+            // btnUnirse
             // 
-            this.button2.Location = new System.Drawing.Point(732, 542);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(286, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Unirse a partida";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnUnirse.Location = new System.Drawing.Point(732, 542);
+            this.btnUnirse.Name = "btnUnirse";
+            this.btnUnirse.Size = new System.Drawing.Size(286, 23);
+            this.btnUnirse.TabIndex = 1;
+            this.btnUnirse.Text = "Unirse a partida";
+            this.btnUnirse.UseVisualStyleBackColor = true;
+            this.btnUnirse.Click += new System.EventHandler(this.ActUnirse);
             // 
             // label1
             // 
@@ -69,8 +69,8 @@ namespace Cacao
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1162, 697);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnUnirse);
+            this.Controls.Add(this.btnCrear);
             this.Name = "Menu";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -80,8 +80,8 @@ namespace Cacao
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCrear;
+        private System.Windows.Forms.Button btnUnirse;
         private System.Windows.Forms.Label label1;
     }
 }

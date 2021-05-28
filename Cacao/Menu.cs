@@ -17,20 +17,33 @@ namespace Cacao
         {
 
             InitializeComponent();
-            Monedas monedas = new Monedas();
+            Moneda monedas = new Moneda();
             this.Controls.Add(monedas);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+            
+        }
+        
+
+
+            
+
+        private void ActCrear(object sender, EventArgs e)
         {
             Servidor ser = new Servidor();
             ser.Conect();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ActUnirse(object sender, EventArgs e)
         {
-            Cliente cli = new Cliente();
-            cli.Conect();
-        } 
+            VCliente vCliente = new VCliente();
+            this.Hide();
+            vCliente.ShowDialog();
+
+            this.Close();
+        }
     }
 }

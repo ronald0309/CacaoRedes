@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cacao.Sock;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,12 @@ namespace Cacao
         public VCliente()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Cliente cli = new Cliente();
+            cli.Conect();
         }
     }
 }

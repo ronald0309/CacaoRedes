@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Cacao.Clases
 {
-    class Losetas
+    class TPoblado
     {
     }
 }
