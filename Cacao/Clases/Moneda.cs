@@ -6,13 +6,16 @@ using System.Windows.Forms;
 
 namespace Cacao.Clases
 {
-    class Moneda: PictureBox
+    class Moneda:PictureBox
     {
+        
         public Moneda()
         {
-          
-            ImageLocation = @"\Recursos\Moneda.jpg";
+            
+            Load(Application.StartupPath+@"\Recursos\meepleVioleta.png");
             Location = new System.Drawing.Point(15, 15);
+            SizeMode = PictureBoxSizeMode.CenterImage;
+            SizeMode = PictureBoxSizeMode.Zoom;
         }
     }
 }

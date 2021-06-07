@@ -15,24 +15,19 @@ namespace Cacao
     {
         public Menu()
         {
-
+            
             InitializeComponent();
-            Moneda monedas = new Moneda();
-            this.Controls.Add(monedas);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-           
             
-        }
-        
-
-
-            
+        }            
 
         private void ActCrear(object sender, EventArgs e)
         {
+
+            //Moneda monedas = new Moneda();
+            //img= monedas;
+            ////MessageBox.Show(monedas.pictureBox.Image.ToString());
+            //this.Controls.Add(monedas);
+
             Servidor ser = new Servidor();
             ser.Conect();
         }
@@ -45,5 +40,7 @@ namespace Cacao
 
             this.Close();
         }
+
+        
     }
 }

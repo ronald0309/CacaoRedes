@@ -29,9 +29,12 @@ namespace Cacao
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.btnCrear = new System.Windows.Forms.Button();
             this.btnUnirse = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.img = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCrear
@@ -63,16 +66,28 @@ namespace Cacao
             this.label1.TabIndex = 2;
             this.label1.Text = "Bienvenido";
             // 
+            // img
+            // 
+            this.img.Image = ((System.Drawing.Image)(resources.GetObject("img.Image")));
+            this.img.Location = new System.Drawing.Point(289, 180);
+            this.img.Name = "img";
+            this.img.Size = new System.Drawing.Size(100, 109);
+            this.img.TabIndex = 3;
+            this.img.TabStop = false;
+            
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1162, 697);
+            this.Controls.Add(this.img);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnUnirse);
             this.Controls.Add(this.btnCrear);
             this.Name = "Menu";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.img)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,6 +98,7 @@ namespace Cacao
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Button btnUnirse;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox img;
     }
 }
 
