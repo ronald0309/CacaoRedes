@@ -11,11 +11,129 @@ namespace Cacao.Sock
 {
     class Servidor
     {
-        public Servidor()
+        //;)
+        IPHostEntry host;
+        IPAddress ipAddr;
+        IPEndPoint endPoint;
+
+        Socket s_Server;
+        Socket s_Client;
+
+        string data;
+
+        public Servidor(string ip, int port)
         {
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            ipAddr = host.AddressList[0];
+            endPoint = new IPEndPoint(ipAddr, port);
+
+            // Create a TCP/IP socket.  
+            s_Server = new Socket(ipAddr.AddressFamily,
+            SocketType.Stream, ProtocolType.Tcp);
+        }
+
+        public void Start()
+        {
+            // Data buffer for incoming data.  
+            //byte[] bytes;
+            //data = null;
+
+            try
+            {
+                s_Server.Bind(endPoint);
+                //numero de clientes permitidos
+                s_Server.Listen(10);
+
+                // Start listening for connections.  
+                while (true)
+                {
+                    //bytes = new byte[1024];
+                    Console.WriteLine("Esperando una conexión...");
+                    //El programa espera acá, mientras le llega una solicitud de conexión
+                    s_Client = s_Server.Accept();
+                    data = null;
+                    while (true)
+                    {
+                        //validaciones, qué sucede si hay conexion? qué pregunta, envia o recibe el server? todo aquí.
+                        //s_Client.Receive(bytes);
+                        string datos = clientReceive();
+                        if (datos == "Hola server, desde el cliente") { 
+                        MessageBox.Show(datos);
+                        Send("Hola cliente, desde el server");
+                            break;
+                        }
+                       
+
+                        //break;
+                    }
+                    Console.WriteLine("Text received : {0}", data);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+
+            Console.WriteLine("\nPress ENTER to continue...");
+            Console.Read();
+        }
+
+        public void Send(string msj)
+        {
+            try
+            {
+                
+                s_Client.Send(stringTobyte(msj));
+                Console.WriteLine("Mensaje Enviado");
+                //s_Client.Close();
+            }
+            catch (SocketException se)
+            {
+                Console.WriteLine("ERROR {0}", se.Message);
+            }
+        }
+
+        public byte[] stringTobyte(string msj)
+        {
+            msj += "<EOF>";
+            byte[] byteMsj = Encoding.ASCII.GetBytes(msj);
+            Console.WriteLine("Mensaje Convertido");
+            return byteMsj;
+
 
         }
-        public void Conect()
+
+        public string clientReceive()
+        {
+            string recibido = "";
+            byte[] buffer = new byte[1024];
+            int bytesRec = s_Client.Receive(buffer);
+            recibido += Encoding.ASCII.GetString(buffer, 0, bytesRec);
+            if (recibido.IndexOf("<EOF>") > -1)
+            {
+                recibido = recibido.Remove(recibido.Length - 5);
+            }
+            return recibido;
+        }
+        public string byte2string(byte[] buffer,int bytesRec)
+        {
+            //data = null;
+            string msj="";
+            //int bytesRec = s_Client.Receive(buffer);
+            data += Encoding.ASCII.GetString(buffer, 0, bytesRec);
+            if (data.IndexOf("<EOF>") > -1)
+            {
+                data = data.Remove(data.Length - 5);
+                //b = true;
+            }
+
+            return msj;
+        }
+    }
+}
+        //;)
+
+        /*public void Conect()
         {
             Conectar();
         }
@@ -40,7 +158,7 @@ namespace Cacao.Sock
                 /*Aca ponemos todo lo que queramos hacer con el socket, osea antes de
                 
 37
-                cerrarlo je*/
+                cerrarlo je
                 MessageBox.Show("Conectado");
                 miPrimerSocket.Close(); //Luego lo cerramos
             }
@@ -51,5 +169,4 @@ namespace Cacao.Sock
             Console.WriteLine("Presione cualquier tecla para terminar");
             Console.ReadLine();
         }
-    }
-}
+    }*/
