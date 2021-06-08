@@ -8,24 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Ronny\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ronny\\Documents\\GitHub\\CacaoRedes\\Cacao\\Cacao.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\CacaoRedes\\Cacao\\Cacao.csproj",
       "projectName": "Cacao",
-      "projectPath": "C:\\Users\\Ronny\\Documents\\GitHub\\CacaoRedes\\Cacao\\Cacao.csproj",
-      "packagesPath": "C:\\Users\\Ronny\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ronny\\Documents\\GitHub\\CacaoRedes\\Cacao\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\CacaoRedes\\Cacao\\Cacao.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\CacaoRedes\\Cacao\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Ronny\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

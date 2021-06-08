@@ -12,7 +12,9 @@ C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.c
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.dll
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.pdb
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.genruntimeconfig.cache
+
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.Properties.Resources.resources
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.Menu.resources
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.VCliente.resources
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.VistaJuego.resources
+
