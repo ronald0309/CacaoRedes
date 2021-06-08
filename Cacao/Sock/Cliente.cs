@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Net;            //   Paso 1
 using System.Net.Sockets;    //   Paso 1
 using System.Windows.Forms;
+using Cacao.Utils;
 
 namespace Cacao.Sock
 {
@@ -101,6 +102,23 @@ namespace Cacao.Sock
                 recibido = recibido.Remove(recibido.Length - 5);
             }
             return recibido;
+        }
+
+        public void sendObject(object toSend)
+        {
+            s_Client.Send(BinSerial.Serializar(toSend));
+
+        }
+
+        public Loseta recibirLoseta()
+        {
+            Loseta l;
+            byte[] buffer = new byte[1024];
+            s_Client.Receive(buffer);
+            l = (Loseta)BinSerial.Deserializar(buffer);
+            MessageBox.Show(l.nom + "||" + l.num);
+            return l;
+
         }
 
         /*public void Conect()

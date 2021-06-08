@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Net;               //   Paso 1
 using System.Net.Sockets;       //   Paso 1
 using System.Windows.Forms;
+using Cacao.Utils;
 
 namespace Cacao.Sock
 {
@@ -56,10 +57,14 @@ namespace Cacao.Sock
                     {
                         //validaciones, qué sucede si hay conexion? qué pregunta, envia o recibe el server? todo aquí.
                         //s_Client.Receive(bytes);
-                        string datos = clientReceive();
-                        if (datos == "Hola server, desde el cliente") { 
-                        MessageBox.Show(datos);
-                        Send("Hola cliente, desde el server");
+
+                        Loseta l = recibirLoseta(s_Client);
+                        if (l.num == 1) {
+                            // Loseta l = new Loseta("Loseta 1", 3);
+                            //MessageBox.Show(datos);
+                            l.nom = "Loseta recibida";l.num = 2;
+
+                            s_Client.Send(BinSerial.Serializar(l));
                             break;
                         }
                        
@@ -99,7 +104,16 @@ namespace Cacao.Sock
             byte[] byteMsj = Encoding.ASCII.GetBytes(msj);
             Console.WriteLine("Mensaje Convertido");
             return byteMsj;
+        }
 
+        public Loseta recibirLoseta(object obj) {
+            string recibido = "";
+            Loseta l;
+            byte[] buffer = new byte[1024];
+            s_Client.Receive(buffer);
+            l = (Loseta)BinSerial.Deserializar(buffer);
+            MessageBox.Show(l.nom+"||"+l.num);
+            return l;
 
         }
 
@@ -129,6 +143,8 @@ namespace Cacao.Sock
 
             return msj;
         }
+
+        
     }
 }
         //;)
