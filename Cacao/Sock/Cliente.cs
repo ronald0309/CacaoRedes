@@ -8,6 +8,7 @@ using System.Net.Sockets;    //   Paso 1
 using System.Windows.Forms;
 using System.Threading;
 using Cacao.Utils;
+using Cacao.Clases;
 namespace Cacao.Sock
 {
     class Cliente

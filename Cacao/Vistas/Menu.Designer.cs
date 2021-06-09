@@ -39,7 +39,7 @@ namespace Cacao
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(103, 542);
+            this.btnCrear.Location = new System.Drawing.Point(103, 819);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(286, 23);
             this.btnCrear.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace Cacao
             // 
             // btnUnirse
             // 
-            this.btnUnirse.Location = new System.Drawing.Point(732, 542);
+            this.btnUnirse.Location = new System.Drawing.Point(1465, 819);
             this.btnUnirse.Name = "btnUnirse";
             this.btnUnirse.Size = new System.Drawing.Size(286, 23);
             this.btnUnirse.TabIndex = 1;
@@ -74,19 +74,18 @@ namespace Cacao
             this.img.Size = new System.Drawing.Size(100, 109);
             this.img.TabIndex = 3;
             this.img.TabStop = false;
-            
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1162, 697);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.img);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnUnirse);
             this.Controls.Add(this.btnCrear);
             this.Name = "Menu";
-            this.Text = "Form1";
+            this.Text = "Menú";
             ((System.ComponentModel.ISupportInitialize)(this.img)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

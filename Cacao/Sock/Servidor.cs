@@ -7,6 +7,7 @@ using System.Net;               //   Paso 1
 using System.Net.Sockets;       //   Paso 1
 using System.Windows.Forms;
 using Cacao.Utils;
+using Cacao.Clases;
 
 namespace Cacao.Sock
 {
@@ -44,14 +45,16 @@ namespace Cacao.Sock
                 s_Server.Bind(endPoint);
                 //numero de clientes permitidos
                 s_Server.Listen(10);
-
+                MessageBox.Show("Conecct");
                 // Start listening for connections.  
                 while (true)
                 {
                     //bytes = new byte[1024];
                     Console.WriteLine("Esperando una conexión...");
                     //El programa espera acá, mientras le llega una solicitud de conexión
+                    MessageBox.Show("Conecct");
                     s_Client = s_Server.Accept();
+                    MessageBox.Show("Conecct");
                     data = null;
                     while (true)
                     {
@@ -76,7 +79,8 @@ namespace Cacao.Sock
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.ToString());
+                MessageBox.Show(e.ToString());
+                //Console.WriteLine(e.ToString());
             }
 
             Console.WriteLine("\nPress ENTER to continue...");

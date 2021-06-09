@@ -17,19 +17,12 @@ namespace Cacao
         {
             
             InitializeComponent();
-            
         }            
 
         private void ActCrear(object sender, EventArgs e)
         {
-
-            //Moneda monedas = new Moneda();
-            //img= monedas;
-            ////MessageBox.Show(monedas.pictureBox.Image.ToString());
-            //this.Controls.Add(monedas);
-
-            Servidor ser = new Servidor();
-            ser.Conect();
+            Servidor servidor = new Servidor("192.168.8.103", 1234);
+            servidor.Start();
         }
 
         private void ActUnirse(object sender, EventArgs e)
@@ -37,7 +30,6 @@ namespace Cacao
             VCliente vCliente = new VCliente();
             this.Hide();
             vCliente.ShowDialog();
-
             this.Close();
         }
 
