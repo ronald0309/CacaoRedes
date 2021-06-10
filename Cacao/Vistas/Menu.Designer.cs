@@ -34,6 +34,7 @@ namespace Cacao
             this.btnUnirse = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.img = new System.Windows.Forms.PictureBox();
+            this.prueba = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,11 +76,20 @@ namespace Cacao
             this.img.TabIndex = 3;
             this.img.TabStop = false;
             // 
+            // prueba
+            // 
+            this.prueba.AccessibleName = "";
+            this.prueba.Location = new System.Drawing.Point(202, 454);
+            this.prueba.Name = "prueba";
+            this.prueba.Size = new System.Drawing.Size(294, 181);
+            this.prueba.TabIndex = 4;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.prueba);
             this.Controls.Add(this.img);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnUnirse);
@@ -98,6 +108,7 @@ namespace Cacao
         private System.Windows.Forms.Button btnUnirse;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox img;
+        private System.Windows.Forms.Panel prueba;
     }
 }
 

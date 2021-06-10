@@ -117,7 +117,7 @@ namespace Cacao.Sock
             byte[] buffer = new byte[1024];
             s_Client.Receive(buffer);
             l = (Loseta)BinSerial.Deserializar(buffer);
-            MessageBox.Show(l.nom + "||" + l.num);
+            MessageBox.Show(l.Nombre + "||" + l.IsOculta);
             return l;
 
         }

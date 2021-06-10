@@ -1,6 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Clases\FCacao.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Clases\FSol.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Clases\LJungla.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Clases\Loseta.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Clases\LTrabajador.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="Clases\Meeple.cs">
       <SubType>Component</SubType>
     </Compile>

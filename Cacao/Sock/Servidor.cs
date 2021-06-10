@@ -62,10 +62,10 @@ namespace Cacao.Sock
                         //s_Client.Receive(bytes);
 
                         Loseta l = recibirLoseta(s_Client);
-                        if (l.num == 1) {
+                        if (l.IsOculta) {
                             // Loseta l = new Loseta("Loseta 1", 3);
                             //MessageBox.Show(datos);
-                            l.nom = "Loseta recibida";l.num = 2;
+                            l.Nombre = "Loseta recibida";
 
                             s_Client.Send(BinSerial.Serializar(l));
                             break;
@@ -116,7 +116,7 @@ namespace Cacao.Sock
             byte[] buffer = new byte[1024];
             s_Client.Receive(buffer);
             l = (Loseta)BinSerial.Deserializar(buffer);
-            MessageBox.Show(l.nom+"||"+l.num);
+            MessageBox.Show(l.Nombre+"||"+l.IsOculta);
             return l;
 
         }

@@ -20,8 +20,8 @@ namespace Cacao
         {
             Cliente cliente = new Cliente("192.168.8.103", 1234);
             cliente.Start();
-            Loseta l = new Loseta("Loseta 1", 1);
-            cliente.sendObject(l);
+           // Clases.Loseta l = new Loseta("Loseta 1", 1);
+            //cliente.sendObject(l);
             cliente.recibirLoseta();
         }
 

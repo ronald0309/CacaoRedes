@@ -1,19 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Cacao.Clases
 {
     [Serializable]
-    class Loseta
+    class Loseta : PictureBox
     {
-        public string nom { get; set; }
-        public int num { get; set; }
-
-        public Loseta(string nom, int num)
+        
+        private string nombre;
+        private bool isOculta;
+        public Loseta(string nombre, bool isOculta){
+            this.nombre = nombre;
+            this.isOculta = isOculta;
+          
+        }
+        public string Nombre{
+            get { return nombre; }
+            set { nombre = value; }
+        }
+        public bool IsOculta
         {
-            this.nom = nom;
-            this.num = num;
+            get { return isOculta; }
+            set { isOculta = value; }
         }
     }
 }
