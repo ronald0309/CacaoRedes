@@ -29,6 +29,9 @@ namespace Cacao
             Moneda mn = new Moneda(10);
             //prueba.Controls.Add(f);
 
+
+            Jugador nj = new Jugador("J",10,"rojo",3);
+            prueba.Controls.Add(nj.Meeple);
         }            
 
         private void ActCrear(object sender, EventArgs e)
