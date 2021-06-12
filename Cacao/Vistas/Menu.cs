@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Cacao.Sock;
 using Cacao.Clases;
+using System.Drawing.Imaging;
+
 namespace Cacao
 {
     public partial class Menu : Form
@@ -17,6 +19,7 @@ namespace Cacao
         {
             
             InitializeComponent();
+            lblTitulo.Parent = pbx1;
             FCacao f = new FCacao();
             FSol s = new FSol();
             int[] n = { 1, 3, 0,0};
@@ -25,7 +28,6 @@ namespace Cacao
             Meeple m = new Meeple("amarillo");
             Moneda mn = new Moneda(10);
             //prueba.Controls.Add(f);
-            prueba.Controls.Add(mn);
 
         }            
 
@@ -42,7 +44,6 @@ namespace Cacao
             vCliente.ShowDialog();
             this.Close();
         }
-
-        
+       
     }
 }

@@ -29,74 +29,71 @@ namespace Cacao
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.btnCrear = new System.Windows.Forms.Button();
             this.btnUnirse = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.img = new System.Windows.Forms.PictureBox();
-            this.prueba = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.pbx1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(103, 819);
+            this.btnCrear.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnCrear.Location = new System.Drawing.Point(103, 801);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(286, 23);
+            this.btnCrear.Size = new System.Drawing.Size(286, 41);
             this.btnCrear.TabIndex = 0;
             this.btnCrear.Text = "Crear partida";
-            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.UseVisualStyleBackColor = false;
             this.btnCrear.Click += new System.EventHandler(this.ActCrear);
             // 
             // btnUnirse
             // 
-            this.btnUnirse.Location = new System.Drawing.Point(1465, 819);
+            this.btnUnirse.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnUnirse.Location = new System.Drawing.Point(1465, 801);
             this.btnUnirse.Name = "btnUnirse";
-            this.btnUnirse.Size = new System.Drawing.Size(286, 23);
+            this.btnUnirse.Size = new System.Drawing.Size(286, 41);
             this.btnUnirse.TabIndex = 1;
             this.btnUnirse.Text = "Unirse a partida";
-            this.btnUnirse.UseVisualStyleBackColor = true;
+            this.btnUnirse.UseVisualStyleBackColor = false;
             this.btnUnirse.Click += new System.EventHandler(this.ActUnirse);
             // 
-            // label1
+            // lblTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(525, 195);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Bienvenido";
+            this.lblTitulo.AutoEllipsis = true;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitulo.Cursor = System.Windows.Forms.Cursors.No;
+            this.lblTitulo.Font = new System.Drawing.Font("Viner Hand ITC", 18F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.lblTitulo.ForeColor = System.Drawing.Color.Black;
+            this.lblTitulo.Location = new System.Drawing.Point(884, 143);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(152, 39);
+            this.lblTitulo.TabIndex = 2;
+            this.lblTitulo.Text = "Bienvenido";
             // 
-            // img
+            // pbx1
             // 
-            this.img.Image = ((System.Drawing.Image)(resources.GetObject("img.Image")));
-            this.img.Location = new System.Drawing.Point(289, 180);
-            this.img.Name = "img";
-            this.img.Size = new System.Drawing.Size(100, 109);
-            this.img.TabIndex = 3;
-            this.img.TabStop = false;
-            // 
-            // prueba
-            // 
-            this.prueba.AccessibleName = "";
-            this.prueba.Location = new System.Drawing.Point(202, 454);
-            this.prueba.Name = "prueba";
-            this.prueba.Size = new System.Drawing.Size(294, 181);
-            this.prueba.TabIndex = 4;
+            this.pbx1.Image = global::Cacao.Properties.Resources.FondoMenu;
+            this.pbx1.Location = new System.Drawing.Point(0, 0);
+            this.pbx1.Name = "pbx1";
+            this.pbx1.Size = new System.Drawing.Size(1920, 1080);
+            this.pbx1.TabIndex = 3;
+            this.pbx1.TabStop = false;
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.prueba);
-            this.Controls.Add(this.img);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnUnirse);
             this.Controls.Add(this.btnCrear);
+            this.Controls.Add(this.pbx1);
             this.Name = "Menu";
             this.Text = "Menú";
-            ((System.ComponentModel.ISupportInitialize)(this.img)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,9 +103,8 @@ namespace Cacao
 
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Button btnUnirse;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox img;
-        private System.Windows.Forms.Panel prueba;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.PictureBox pbx1;
     }
 }
 

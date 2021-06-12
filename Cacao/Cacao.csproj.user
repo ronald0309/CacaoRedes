@@ -28,6 +28,9 @@
     <Compile Update="Vistas\TableroPoblado.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Vistas\TableroJuego.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Vistas\VCliente.cs">
       <SubType>Form</SubType>
     </Compile>
