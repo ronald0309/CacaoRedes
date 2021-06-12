@@ -42,6 +42,7 @@ namespace Cacao.Vistas
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1430, 900);
             this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // TableroJuego
             // 
@@ -50,7 +51,7 @@ namespace Cacao.Vistas
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "TableroJuego";
-            this.Size = new System.Drawing.Size(1431, 900);
+            this.Size = new System.Drawing.Size(1431, 1040);
             this.ResumeLayout(false);
 
         }

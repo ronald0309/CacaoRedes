@@ -37,3 +37,4 @@ C:\Users\User\Desktop\CacaoRedes\Cacao\bin\Debug\netcoreapp3.1\Cacao.dll
 C:\Users\User\Desktop\CacaoRedes\Cacao\bin\Debug\netcoreapp3.1\Cacao.pdb
 C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.genruntimeconfig.cache
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.Vistas.TableroJuego.resources
+C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.Vistas.TableroJuego.resources

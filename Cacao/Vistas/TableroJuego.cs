@@ -10,11 +10,18 @@ namespace Cacao.Vistas
 {
     public partial class TableroJuego : UserControl
     {
+       
         public TableroJuego()
         {
             InitializeComponent();
         }
 
-        
+        public FlowLayoutPanel obtenerMesa() {
+            return flowLayoutPanel1;
+        }
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

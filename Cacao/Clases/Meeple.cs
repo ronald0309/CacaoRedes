@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cacao.Utils;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
@@ -14,16 +15,7 @@ namespace Cacao.Clases
             inicializarMepple(); 
         }
         private void inicializarMepple() {
-            string urlImage = "";
-            if (this.color == "morada" || this.color == "morado") {
-                urlImage = "meepleMorada";
-            } else if (this.color == "roja" || this.color =="rojo") {
-                urlImage = "meepleRoja";
-            } else if (this.color == "amarilla" || this.color == "amarillo") {
-                urlImage = "meepleAmarilla";
-            } else if (this.color == "blanca" || this.color == "blanco") {
-                urlImage = "meepleBlanca";
-            }
+            string urlImage = "meeple" + Colores.seleccionarColor(this.color);
 
             Load(Application.StartupPath + @"\Recursos\"+urlImage+".png");
             Location = new System.Drawing.Point(0,0);

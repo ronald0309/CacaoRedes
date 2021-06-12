@@ -59,6 +59,7 @@ namespace Cacao
             this.tableroJuego1.Name = "tableroJuego1";
             this.tableroJuego1.Size = new System.Drawing.Size(1431, 900);
             this.tableroJuego1.TabIndex = 4;
+            this.tableroJuego1.Load += new System.EventHandler(this.tableroJuego1_Load);
             // 
             // label1
             // 
@@ -107,5 +108,6 @@ namespace Cacao
         private Vistas.TableroJuego tableroJuego1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
