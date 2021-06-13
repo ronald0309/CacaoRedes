@@ -9,7 +9,8 @@ namespace Cacao.Clases
 {
     class LTrabajador : Loseta
     {
-        private string color="";
+        private string color=""; 
+        
         private int[] meples = new int[4];
         public static string urlImagenOculta = "Reverso";
         public static string urlImagenVisible = "Losa";
@@ -106,6 +107,6 @@ namespace Cacao.Clases
             m.Parent = this;
 
         }
-
+        public string Colors { get { return color; } set { color = value; } }
     }
 }

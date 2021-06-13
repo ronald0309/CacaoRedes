@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cacao.Sock;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,7 @@ namespace Cacao.Clases
 {
     class Jugador{
         //Jugador datos
+        private Cliente cliente;
         private string nombre;
         private int edad;
         private string color;

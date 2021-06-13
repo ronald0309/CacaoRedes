@@ -1,4 +1,5 @@
 ﻿using Cacao.Clases;
+using Cacao.Sock;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,33 +48,44 @@ namespace Cacao
 
             Jugador nj = new Jugador("J", 10, "Amarillo", 3);
             //prueba.Controls.Add(nj.Meeple);
-            tableroJuego1.obtenerMesa().Controls.Add(lt1);
-            tableroJuego1.obtenerMesa().Controls.Add(lt2);
-            tableroJuego1.obtenerMesa().Controls.Add(lt3);
-            tableroJuego1.obtenerMesa().Controls.Add(lt4);
-            tableroJuego1.obtenerMesa().Controls.Add(lt5);
-            tableroJuego1.obtenerMesa().Controls.Add(lt6);
-            tableroJuego1.obtenerMesa().Controls.Add(lt7);
-            tableroJuego1.obtenerMesa().Controls.Add(lt8);
-            tableroJuego1.obtenerMesa().Controls.Add(lt9);
-            tableroJuego1.obtenerMesa().Controls.Add(lt10);
-            tableroJuego1.obtenerMesa().Controls.Add(lt11);
-            tableroJuego1.obtenerMesa().Controls.Add(lt12);
-            tableroJuego1.obtenerMesa().Controls.Add(lt13);
-            tableroJuego1.obtenerMesa().Controls.Add(lt14);
-            tableroJuego1.obtenerMesa().Controls.Add(lt15);
-            tableroJuego1.obtenerMesa().Controls.Add(lt16);
-            tableroJuego1.obtenerMesa().Controls.Add(lt17);
-            tableroJuego1.obtenerMesa().Controls.Add(lt18);
-            tableroJuego1.obtenerMesa().Controls.Add(lt19);
-            tableroJuego1.obtenerMesa().Controls.Add(lt20);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt1);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt2);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt3);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt4);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt5);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt6);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt7);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt8);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt9);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt10);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt11);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt12);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt13);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt14);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt15);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt16);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt17);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt18);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt19);
+            //tableroJuego1.obtenerMesa().Controls.Add(lt20);
+
+            Servidor ss = new Servidor("192.168.100.45",8080);
+            Jugador[] js = new Jugador[4];
+            js[0] = new Jugador("Far",22,"Rojo",js.Length);
+            js[1] = new Jugador("Farlol", 22, "Azul", js.Length);
+            js[2] = new Jugador("Farrrrr", 12, "Blanco", js.Length);
+
+            js[3] = new Jugador("Farrr xdr", 12, "Lima", js.Length);
+
+
+            Partida p = new Partida(ss,"JAJA",0,js);
+            foreach (LTrabajador l in js[0].LosetasTrabajadores) { 
+            
+            tableroJuego1.obtenerMesa().Controls.Add(l);
+            }
             //prueba.Controls.Add(lt);
         }
 
-        private void tableroJuego1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
