@@ -29,278 +29,285 @@ namespace Cacao
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableroPoblado));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            this.ptbAgua11 = new System.Windows.Forms.PictureBox();
+            this.ptbAgua16 = new System.Windows.Forms.PictureBox();
+            this.ptbAgua_10 = new System.Windows.Forms.PictureBox();
+            this.ptbAgua_4 = new System.Windows.Forms.PictureBox();
+            this.ptbAgua4 = new System.Windows.Forms.PictureBox();
+            this.ptbAgua_1 = new System.Windows.Forms.PictureBox();
+            this.ptbAgua0 = new System.Windows.Forms.PictureBox();
+            this.ptbAgua2 = new System.Windows.Forms.PictureBox();
+            this.ptbAgua7 = new System.Windows.Forms.PictureBox();
+            this.ptbSol2 = new System.Windows.Forms.PictureBox();
+            this.ptbSol1 = new System.Windows.Forms.PictureBox();
+            this.ptbSol3 = new System.Windows.Forms.PictureBox();
+            this.ptbCacao3 = new System.Windows.Forms.PictureBox();
+            this.ptbCacao4 = new System.Windows.Forms.PictureBox();
+            this.ptbCacao5 = new System.Windows.Forms.PictureBox();
+            this.ptbCacao2 = new System.Windows.Forms.PictureBox();
+            this.ptbCacao1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua_10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSol2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSol1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSol3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCacao3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCacao4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCacao5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCacao2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCacao1)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // ptbAgua11
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(20, 248);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.ptbAgua11.BackColor = System.Drawing.Color.Transparent;
+            this.ptbAgua11.Location = new System.Drawing.Point(197, 313);
+            this.ptbAgua11.Name = "ptbAgua11";
+            this.ptbAgua11.Size = new System.Drawing.Size(51, 48);
+            this.ptbAgua11.TabIndex = 0;
+            this.ptbAgua11.TabStop = false;
             // 
-            // pictureBox2
+            // ptbAgua16
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(20, 165);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.ptbAgua16.BackColor = System.Drawing.Color.Transparent;
+            this.ptbAgua16.Location = new System.Drawing.Point(91, 313);
+            this.ptbAgua16.Name = "ptbAgua16";
+            this.ptbAgua16.Size = new System.Drawing.Size(51, 48);
+            this.ptbAgua16.TabIndex = 1;
+            this.ptbAgua16.TabStop = false;
             // 
-            // pictureBox3
+            // ptbAgua_10
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(20, 92);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.ptbAgua_10.BackColor = System.Drawing.Color.Transparent;
+            this.ptbAgua_10.Location = new System.Drawing.Point(43, 50);
+            this.ptbAgua_10.Name = "ptbAgua_10";
+            this.ptbAgua_10.Size = new System.Drawing.Size(51, 48);
+            this.ptbAgua_10.TabIndex = 2;
+            this.ptbAgua_10.TabStop = false;
             // 
-            // pictureBox4
+            // ptbAgua_4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(104, 10);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
+            this.ptbAgua_4.BackColor = System.Drawing.Color.Transparent;
+            this.ptbAgua_4.Location = new System.Drawing.Point(183, 41);
+            this.ptbAgua_4.Name = "ptbAgua_4";
+            this.ptbAgua_4.Size = new System.Drawing.Size(51, 48);
+            this.ptbAgua_4.TabIndex = 3;
+            this.ptbAgua_4.TabStop = false;
             // 
-            // pictureBox5
+            // ptbAgua4
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(275, 10);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
+            this.ptbAgua4.BackColor = System.Drawing.Color.Transparent;
+            this.ptbAgua4.Location = new System.Drawing.Point(348, 289);
+            this.ptbAgua4.Name = "ptbAgua4";
+            this.ptbAgua4.Size = new System.Drawing.Size(51, 48);
+            this.ptbAgua4.TabIndex = 4;
+            this.ptbAgua4.TabStop = false;
             // 
-            // pictureBox6
+            // ptbAgua_1
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(187, 10);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
+            this.ptbAgua_1.BackColor = System.Drawing.Color.Transparent;
+            this.ptbAgua_1.Location = new System.Drawing.Point(319, 41);
+            this.ptbAgua_1.Name = "ptbAgua_1";
+            this.ptbAgua_1.Size = new System.Drawing.Size(51, 48);
+            this.ptbAgua_1.TabIndex = 5;
+            this.ptbAgua_1.TabStop = false;
             // 
-            // pictureBox7
+            // ptbAgua0
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(348, 92);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
+            this.ptbAgua0.BackColor = System.Drawing.Color.Transparent;
+            this.ptbAgua0.Location = new System.Drawing.Point(348, 79);
+            this.ptbAgua0.Name = "ptbAgua0";
+            this.ptbAgua0.Size = new System.Drawing.Size(51, 48);
+            this.ptbAgua0.TabIndex = 6;
+            this.ptbAgua0.TabStop = false;
             // 
-            // pictureBox8
+            // ptbAgua2
             // 
-            this.pictureBox8.Location = new System.Drawing.Point(348, 165);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox8.TabIndex = 7;
-            this.pictureBox8.TabStop = false;
+            this.ptbAgua2.BackColor = System.Drawing.Color.Transparent;
+            this.ptbAgua2.Location = new System.Drawing.Point(348, 165);
+            this.ptbAgua2.Name = "ptbAgua2";
+            this.ptbAgua2.Size = new System.Drawing.Size(51, 48);
+            this.ptbAgua2.TabIndex = 7;
+            this.ptbAgua2.TabStop = false;
             // 
-            // pictureBox9
+            // ptbAgua7
             // 
-            this.pictureBox9.Location = new System.Drawing.Point(348, 248);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox9.TabIndex = 8;
-            this.pictureBox9.TabStop = false;
+            this.ptbAgua7.BackColor = System.Drawing.Color.Transparent;
+            this.ptbAgua7.Location = new System.Drawing.Point(319, 313);
+            this.ptbAgua7.Name = "ptbAgua7";
+            this.ptbAgua7.Size = new System.Drawing.Size(51, 48);
+            this.ptbAgua7.TabIndex = 8;
+            this.ptbAgua7.TabStop = false;
             // 
-            // pictureBox10
+            // ptbSol2
             // 
-            this.pictureBox10.Image = global::Cacao.Properties.Resources.AdoracionalSol;
-            this.pictureBox10.Location = new System.Drawing.Point(275, 165);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 9;
-            this.pictureBox10.TabStop = false;
+            this.ptbSol2.BackColor = System.Drawing.Color.Transparent;
+            this.ptbSol2.ErrorImage = null;
+            this.ptbSol2.InitialImage = null;
+            this.ptbSol2.Location = new System.Drawing.Point(275, 137);
+            this.ptbSol2.Name = "ptbSol2";
+            this.ptbSol2.Size = new System.Drawing.Size(51, 48);
+            this.ptbSol2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbSol2.TabIndex = 9;
+            this.ptbSol2.TabStop = false;
             // 
-            // pictureBox11
+            // ptbSol1
             // 
-            this.pictureBox11.Image = global::Cacao.Properties.Resources.AdoracionalSol;
-            this.pictureBox11.Location = new System.Drawing.Point(104, 165);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 10;
-            this.pictureBox11.TabStop = false;
+            this.ptbSol1.BackColor = System.Drawing.Color.Transparent;
+            this.ptbSol1.ErrorImage = null;
+            this.ptbSol1.InitialImage = null;
+            this.ptbSol1.Location = new System.Drawing.Point(197, 165);
+            this.ptbSol1.Name = "ptbSol1";
+            this.ptbSol1.Size = new System.Drawing.Size(51, 48);
+            this.ptbSol1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbSol1.TabIndex = 10;
+            this.ptbSol1.TabStop = false;
             // 
-            // pictureBox12
+            // ptbSol3
             // 
-            this.pictureBox12.Image = global::Cacao.Properties.Resources.FichadeSol;
-            this.pictureBox12.Location = new System.Drawing.Point(187, 79);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 11;
-            this.pictureBox12.TabStop = false;
+            this.ptbSol3.BackColor = System.Drawing.Color.Transparent;
+            this.ptbSol3.ErrorImage = null;
+            this.ptbSol3.InitialImage = null;
+            this.ptbSol3.Location = new System.Drawing.Point(275, 239);
+            this.ptbSol3.Name = "ptbSol3";
+            this.ptbSol3.Size = new System.Drawing.Size(51, 48);
+            this.ptbSol3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbSol3.TabIndex = 11;
+            this.ptbSol3.TabStop = false;
             // 
-            // pictureBox13
+            // ptbCacao3
             // 
-            this.pictureBox13.ErrorImage = global::Cacao.Properties.Resources.cacao;
-            this.pictureBox13.Image = global::Cacao.Properties.Resources.cacao;
-            this.pictureBox13.InitialImage = global::Cacao.Properties.Resources.cacao;
-            this.pictureBox13.Location = new System.Drawing.Point(348, 323);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 12;
-            this.pictureBox13.TabStop = false;
+            this.ptbCacao3.BackColor = System.Drawing.Color.Transparent;
+            this.ptbCacao3.ErrorImage = null;
+            this.ptbCacao3.InitialImage = null;
+            this.ptbCacao3.Location = new System.Drawing.Point(0, 275);
+            this.ptbCacao3.Name = "ptbCacao3";
+            this.ptbCacao3.Size = new System.Drawing.Size(47, 42);
+            this.ptbCacao3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbCacao3.TabIndex = 16;
+            this.ptbCacao3.TabStop = false;
             // 
-            // pictureBox14
+            // ptbCacao4
             // 
-            this.pictureBox14.ErrorImage = global::Cacao.Properties.Resources.cacao;
-            this.pictureBox14.Image = global::Cacao.Properties.Resources.cacao;
-            this.pictureBox14.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox14.InitialImage")));
-            this.pictureBox14.Location = new System.Drawing.Point(104, 323);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox14.TabIndex = 13;
-            this.pictureBox14.TabStop = false;
+            this.ptbCacao4.BackColor = System.Drawing.Color.Transparent;
+            this.ptbCacao4.ErrorImage = null;
+            this.ptbCacao4.InitialImage = null;
+            this.ptbCacao4.Location = new System.Drawing.Point(0, 313);
+            this.ptbCacao4.Name = "ptbCacao4";
+            this.ptbCacao4.Size = new System.Drawing.Size(47, 42);
+            this.ptbCacao4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbCacao4.TabIndex = 18;
+            this.ptbCacao4.TabStop = false;
             // 
-            // pictureBox15
+            // ptbCacao5
             // 
-            this.pictureBox15.ErrorImage = global::Cacao.Properties.Resources.cacao;
-            this.pictureBox15.Image = global::Cacao.Properties.Resources.cacao;
-            this.pictureBox15.Location = new System.Drawing.Point(187, 323);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox15.TabIndex = 14;
-            this.pictureBox15.TabStop = false;
+            this.ptbCacao5.BackColor = System.Drawing.Color.Transparent;
+            this.ptbCacao5.ErrorImage = null;
+            this.ptbCacao5.InitialImage = null;
+            this.ptbCacao5.Location = new System.Drawing.Point(0, 348);
+            this.ptbCacao5.Name = "ptbCacao5";
+            this.ptbCacao5.Size = new System.Drawing.Size(47, 42);
+            this.ptbCacao5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbCacao5.TabIndex = 19;
+            this.ptbCacao5.TabStop = false;
             // 
-            // pictureBox16
+            // ptbCacao2
             // 
-            this.pictureBox16.ErrorImage = global::Cacao.Properties.Resources.cacao;
-            this.pictureBox16.Image = global::Cacao.Properties.Resources.cacao;
-            this.pictureBox16.Location = new System.Drawing.Point(275, 323);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox16.TabIndex = 15;
-            this.pictureBox16.TabStop = false;
+            this.ptbCacao2.BackColor = System.Drawing.Color.Transparent;
+            this.ptbCacao2.ErrorImage = null;
+            this.ptbCacao2.InitialImage = null;
+            this.ptbCacao2.Location = new System.Drawing.Point(0, 239);
+            this.ptbCacao2.Name = "ptbCacao2";
+            this.ptbCacao2.Size = new System.Drawing.Size(47, 42);
+            this.ptbCacao2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbCacao2.TabIndex = 20;
+            this.ptbCacao2.TabStop = false;
             // 
-            // pictureBox17
+            // ptbCacao1
             // 
-            this.pictureBox17.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox17.ErrorImage")));
-            this.pictureBox17.Image = global::Cacao.Properties.Resources.cacao;
-            this.pictureBox17.Location = new System.Drawing.Point(20, 323);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox17.TabIndex = 16;
-            this.pictureBox17.TabStop = false;
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(419, 399);
-            this.pictureBox18.TabIndex = 17;
-            this.pictureBox18.TabStop = false;
+            this.ptbCacao1.BackColor = System.Drawing.Color.Transparent;
+            this.ptbCacao1.ErrorImage = null;
+            this.ptbCacao1.InitialImage = null;
+            this.ptbCacao1.Location = new System.Drawing.Point(0, 202);
+            this.ptbCacao1.Name = "ptbCacao1";
+            this.ptbCacao1.Size = new System.Drawing.Size(47, 42);
+            this.ptbCacao1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbCacao1.TabIndex = 21;
+            this.ptbCacao1.TabStop = false;
             // 
             // TableroPoblado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Controls.Add(this.pictureBox17);
-            this.Controls.Add(this.pictureBox16);
-            this.Controls.Add(this.pictureBox15);
-            this.Controls.Add(this.pictureBox14);
-            this.Controls.Add(this.pictureBox13);
-            this.Controls.Add(this.pictureBox12);
-            this.Controls.Add(this.pictureBox11);
-            this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox18);
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackgroundImage = global::Cacao.Properties.Resources.tableroRosa;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.ptbCacao1);
+            this.Controls.Add(this.ptbCacao2);
+            this.Controls.Add(this.ptbCacao5);
+            this.Controls.Add(this.ptbCacao4);
+            this.Controls.Add(this.ptbCacao3);
+            this.Controls.Add(this.ptbSol3);
+            this.Controls.Add(this.ptbSol1);
+            this.Controls.Add(this.ptbSol2);
+            this.Controls.Add(this.ptbAgua7);
+            this.Controls.Add(this.ptbAgua2);
+            this.Controls.Add(this.ptbAgua0);
+            this.Controls.Add(this.ptbAgua_1);
+            this.Controls.Add(this.ptbAgua4);
+            this.Controls.Add(this.ptbAgua_4);
+            this.Controls.Add(this.ptbAgua_10);
+            this.Controls.Add(this.ptbAgua16);
+            this.Controls.Add(this.ptbAgua11);
+            this.DoubleBuffered = true;
             this.Name = "TableroPoblado";
             this.Size = new System.Drawing.Size(419, 399);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua_10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbAgua7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSol2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSol1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSol3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCacao3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCacao4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCacao5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCacao2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCacao1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.PictureBox pictureBox17;
-        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.PictureBox ptbAgua11;
+        private System.Windows.Forms.PictureBox ptbAgua16;
+        private System.Windows.Forms.PictureBox ptbAgua_10;
+        private System.Windows.Forms.PictureBox ptbAgua_4;
+        private System.Windows.Forms.PictureBox ptbAgua4;
+        private System.Windows.Forms.PictureBox ptbAgua_1;
+        private System.Windows.Forms.PictureBox ptbAgua0;
+        private System.Windows.Forms.PictureBox ptbAgua2;
+        private System.Windows.Forms.PictureBox ptbAgua7;
+        private System.Windows.Forms.PictureBox ptbSol2;
+        private System.Windows.Forms.PictureBox ptbSol1;
+        private System.Windows.Forms.PictureBox ptbSol3;
+        private System.Windows.Forms.PictureBox ptbCacao3;
+        private System.Windows.Forms.PictureBox ptbCacao4;
+        private System.Windows.Forms.PictureBox ptbCacao5;
+        private System.Windows.Forms.PictureBox ptbCacao2;
+        private System.Windows.Forms.PictureBox ptbCacao1;
     }
 }
