@@ -13,6 +13,8 @@ namespace Cacao
         public TableroPoblado()
         {
             InitializeComponent();
+            
         }
+
     }
 }

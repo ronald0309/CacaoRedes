@@ -19,8 +19,19 @@ namespace Cacao
         {
             
             InitializeComponent();
+
             lblTitulo.Parent = pbx1;
 
+
+            
+            FCacao f = new FCacao();
+            FSol s = new FSol();
+            int[] n = { 1, 3, 0,0};
+            LTrabajador lt = new LTrabajador("L1",false,"Roja",n);
+            LJungla lj = new LJungla("templo",false);
+            Meeple m = new Meeple("amarillo");
+            Moneda mn = new Moneda(10);
+            //prueba.Controls.Add(f);
         }            
 
         private void ActCrear(object sender, EventArgs e)
