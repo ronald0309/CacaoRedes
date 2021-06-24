@@ -79,17 +79,22 @@ namespace Cacao
 
 
             Partida p = new Partida(ss,"JAJA",0,js);
-            foreach (LTrabajador l in js[0].LosetasTrabajadores) { 
+            foreach (LTrabajador l in js[2].LosetasTrabajadores) { 
             
+                //Muestra lo que necesite en el tablero.
             tableroJuego1.obtenerMesa().Controls.Add(l);
+
+           // tableroPoblado1.obtenerFocusAguador().
+
             }
+            this.Controls.Add(js[0].TPoblado);
+
+
             //prueba.Controls.Add(lt);
         }
 
+       
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
     }
 }

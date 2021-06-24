@@ -8,12 +8,13 @@ namespace Cacao.Clases
     [Serializable]
     class FCacao : PictureBox
     {
-        private static string urlImagen = "cacao2.png";
+        private static string urlImagen = "cacao.png";
     public FCacao(){
             Load(Application.StartupPath + @"\Recursos\"+urlImagen);
             Location = new System.Drawing.Point(15, 15);
             SizeMode = PictureBoxSizeMode.CenterImage;
-            SizeMode = PictureBoxSizeMode.Zoom;
+            SizeMode = PictureBoxSizeMode.StretchImage;
+            Size = new System.Drawing.Size(50, 50);
         }
 
     }

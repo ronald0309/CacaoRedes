@@ -22,9 +22,6 @@
     <Compile Update="Clases\Moneda.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="Clases\TPoblado.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Update="Vistas\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
