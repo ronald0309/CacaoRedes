@@ -33,14 +33,14 @@ namespace Cacao
         }
         private void actBtnUnirse(object sender, EventArgs e)
         {
-            if (ValidarDatos())
-            {
-                Cliente cliente = new Cliente("192.168.8.103", 1234);
+           // if (ValidarDatos())
+          //  {
+                Cliente cliente = new Cliente("192.168.56.1", 1234);
                 cliente.Start();
                 // Clases.Loseta l = new Loseta("Loseta 1", 1);
                 //cliente.sendObject(l);
                 cliente.recibirLoseta();
-            }
+           // }
         }
         private bool ValidarDatos()
         {
@@ -79,7 +79,7 @@ namespace Cacao
             {
                 MessageBox.Show("Seleccione un color.");
             }
-            if (contador < 4)
+            if (contador == 4)
             {
                 permiso = true;
             }

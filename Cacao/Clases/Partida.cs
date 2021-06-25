@@ -22,13 +22,17 @@ namespace Cacao.Clases
         FSol[] fichasSol;
         Moneda[] monedas;
 
+        Jugador jugadorEnTurno;
+        int contJugador;
+
         public Partida(Servidor server, string nombre, int tiempo, Jugador[] jugadores)
         {
             this.server = server;
             this.nombre = nombre;
             this.tiempo = tiempo;
             this.jugadores = jugadores;
-
+            this.jugadorEnTurno = jugadores[0];
+            this.contJugador = 1;
             crearJuego();
 
         }
@@ -337,6 +341,31 @@ namespace Cacao.Clases
 
             }
 
+        }
+
+        private void iniciaJuego()
+        {
+            if (server.info == "Turno siguiente")
+            {
+                if (contJugador < this.jugadores.Length)
+                {
+                    if (jugadores[contJugador - 1] == this.jugadorEnTurno)
+                    {
+                        this.jugadorEnTurno = jugadores[contJugador];
+                        server.Send("Es el turno del jugador " + contJugador);
+                        contJugador++;
+                    }
+
+                }
+                else
+                {
+                    contJugador = 0;
+                    this.jugadorEnTurno = jugadores[contJugador];
+                    server.Send("Es el turno del jugador " + contJugador);
+
+                }
+
+            }
         }
 
     }

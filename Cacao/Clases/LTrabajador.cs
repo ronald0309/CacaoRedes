@@ -71,8 +71,8 @@ namespace Cacao.Clases
             //urlImagen += meplesColor;
 
             //Carga la imagen de la loseta con el color
-            Load(Application.StartupPath + @"\Recursos\" + meplesColor + ".png");
-            Location = new System.Drawing.Point(0, 0);
+            //Load(Application.StartupPath + @"\Recursos\" + meplesColor + ".png");
+            //Location = new System.Drawing.Point(0, 0);
             
             //SizeMode = PictureBoxSizeMode.Zoom;
             //Size = new System.Drawing.Size(80, 80); Se le cambia el tamaño a las imagenes 
@@ -94,7 +94,7 @@ namespace Cacao.Clases
             }
             if (meples[0] == 1 && meples[1] == 3 && meples[2] == 0 && meples[3] == 0)
             {
-                m.Load(Application.StartupPath + @"\Recursos\" + meplesColor + "P4.png");
+                //m.Load(Application.StartupPath + @"\Recursos\" + meplesColor + "P4.png");
             }
             m.Location = new System.Drawing.Point(0, 0);
             // m.SizeMode = PictureBoxSizeMode.CenterImage;

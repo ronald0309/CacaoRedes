@@ -18,7 +18,7 @@ namespace Cacao.Clases
         private void inicializarMepple() {
             string urlImage = "meeple" + Colores.seleccionarColor(this.color);
 
-            Load(Application.StartupPath + @"\Recursos\"+urlImage+".png");
+            //Load(Application.StartupPath + @"\Recursos\"+urlImage+".png");
             Location = new System.Drawing.Point(0,0);
             SizeMode = PictureBoxSizeMode.StretchImage;
             SizeMode = PictureBoxSizeMode.Zoom;

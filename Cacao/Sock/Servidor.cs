@@ -22,6 +22,7 @@ namespace Cacao.Sock
         Socket s_Client;
 
         string data;
+        public string info;
 
         public Servidor(string ip, int port)
         {
@@ -61,16 +62,17 @@ namespace Cacao.Sock
                         //validaciones, qué sucede si hay conexion? qué pregunta, envia o recibe el server? todo aquí.
                         //s_Client.Receive(bytes);
 
-                        Loseta l = recibirLoseta(s_Client);
-                        if (l.IsOculta) {
-                            // Loseta l = new Loseta("Loseta 1", 3);
-                            //MessageBox.Show(datos);
-                            l.Nombre = "Loseta recibida";
+                        //Loseta l = recibirLoseta(s_Client);
+                        //if (l.IsOculta) {
+                        //    // Loseta l = new Loseta("Loseta 1", 3);
+                        //    //MessageBox.Show(datos);
+                        //    l.Nombre = "Loseta recibida";
 
-                            s_Client.Send(BinSerial.Serializar(l));
-                            break;
-                        }
-                       
+                        //    s_Client.Send(BinSerial.Serializar(l));
+                        //    break;
+                        //}
+                        info = clientReceive();
+                         
 
                         //break;
                     }
