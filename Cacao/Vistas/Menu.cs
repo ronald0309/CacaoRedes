@@ -19,6 +19,11 @@ namespace Cacao
         {
             
             InitializeComponent();
+
+            
+
+
+            
             FCacao f = new FCacao();
             FSol s = new FSol();
             int[] n = { 1, 3, 0,0};

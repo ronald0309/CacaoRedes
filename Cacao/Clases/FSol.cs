@@ -13,10 +13,8 @@ namespace Cacao.Clases
         public FSol() {
             Load(Application.StartupPath + @"\Recursos\"+urlImagen);
             Location = new System.Drawing.Point(15, 15);
-            SizeMode = PictureBoxSizeMode.StretchImage;
+            SizeMode = PictureBoxSizeMode.CenterImage;
             SizeMode = PictureBoxSizeMode.Zoom;
-
-            Size = new System.Drawing.Size(70, 70);
 
 
         }

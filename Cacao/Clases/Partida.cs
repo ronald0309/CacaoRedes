@@ -99,9 +99,9 @@ namespace Cacao.Clases
         }
         private void inicializarTablerosPoblados()
         {
-            for (int i = 0; i < jugadores.Length; i++)
+            for (int i = 0; i < 4; i++)
             {
-                tablerosPoblados[i] = new TableroPoblado(jugadores[i].Color);
+                tablerosPoblados[i] = new TableroPoblado();
             }
         }
         private void inicializarLosetasJungla()

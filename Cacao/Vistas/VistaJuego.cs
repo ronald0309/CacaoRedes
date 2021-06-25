@@ -25,7 +25,6 @@ namespace Cacao
             js[2] = new Jugador("Farrrrr", 12, "Blanco", js.Length);
             js[3] = new Jugador("Farrr xdr", 12, "Lima", js.Length);
             Partida p = new Partida(ss,"JAJA",0,js);
-
             //foreach (LTrabajador l in js[0].LosetasTrabajadores) { 
             //tableroJuego1.obtenerMesa().Controls.Add(l);
             //}
@@ -55,16 +54,14 @@ namespace Cacao
                 {
                     tableroJuego1.obtenerMesa().Controls.Add(matrizJuego[i][j]);
                 }
-
             }
-            this.Controls.Add(js[0].TPoblado);
-
-
             //prueba.Controls.Add(lt);
         }
 
-       
 
-       
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -22,7 +22,7 @@ namespace Cacao.Clases
             Location = new System.Drawing.Point(0,0);
             SizeMode = PictureBoxSizeMode.StretchImage;
             SizeMode = PictureBoxSizeMode.Zoom;
-            Size = new System.Drawing.Size(50, 50);
+            Size = new System.Drawing.Size(150, 150);
 
         }
     }
