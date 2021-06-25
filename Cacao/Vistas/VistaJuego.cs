@@ -12,59 +12,62 @@ namespace Cacao
 {
     public partial class VistaJuego : Form
     {
+        Servidor ss = new Servidor("192.168.100.45", 8080);
+        Jugador[] js = new Jugador[4];
+        Partida p;
+        
+        
         public VistaJuego()
         {
             InitializeComponent();
-           
-
-
-            Servidor ss = new Servidor("192.168.100.45",8080);
-            Jugador[] js = new Jugador[4];
             js[0] = new Jugador("Far",22,"Rojo",js.Length);
             js[1] = new Jugador("Farlol", 22, "Azul", js.Length);
             js[2] = new Jugador("Farrrrr", 12, "Blanco", js.Length);
             js[3] = new Jugador("Farrr xdr", 12, "Lima", js.Length);
-            Partida p = new Partida(ss,"JAJA",0,js);
+            p = new Partida(ss,"JAJA",0,js);
 
-            //foreach (LTrabajador l in js[0].LosetasTrabajadores) { 
-            //tableroJuego1.obtenerMesa().Controls.Add(l);
-            //}
-            //    foreach (LTrabajador l in js[1].LosetasTrabajadores)
-            //{
-            //    tableroJuego1.obtenerMesa().Controls.Add(l);
-            //}
-            int tamanoMatrizX =18;
-            int tamanoMatrizY = 11;
-            LTrabajador[][] matrizJuego = new LTrabajador[tamanoMatrizX][];
-            for(int i =0; i < tamanoMatrizX; i++)
+            InicializarMatriz();
+            CargarMatriz();
+            flpMazoMano.Controls.Add(p.jugadores[0].LosetasTrabajadores[0]);
+            flpMazoMano.Controls.Add(p.jugadores[0].LosetasTrabajadores[1]);
+            flpMazoMano.Controls.Add(p.jugadores[0].LosetasTrabajadores[2]);
+
+            this.Controls.Add(js[0].TPoblado);
+        }
+        public void InicializarMatriz()
+        {
+            p.matrizJuego = new LTrabajador[p.tamanoMatrizX][];
+            for (int i = 0; i < p.tamanoMatrizX; i++)
             {
-                matrizJuego[i] = new LTrabajador[tamanoMatrizY];
+                p.matrizJuego[i] = new LTrabajador[p.tamanoMatrizY];
             }
-            for (int i = 0; i < tamanoMatrizX; i++)
+            for (int i = 0; i < p.tamanoMatrizX; i++)
             {
-                for (int j = 0; j < tamanoMatrizY; j++)
+                for (int j = 0; j < p.tamanoMatrizY; j++)
                 {
                     int[] posicionesCartasTrabajadores = { 1, 1, 1, 1 };
-                    matrizJuego[i][j] = new LTrabajador("Loseta Trabajador", true,"Rojo", posicionesCartasTrabajadores);
-
+                    p.matrizJuego[i][j] = new LTrabajador("Loseta Trabajador", true, "Rojo", posicionesCartasTrabajadores);
+                    p.matrizJuego[i][j].Click += (sendr, EventArgs) => { Partida_Click(sendr, EventArgs, i, j); };
                 }
             }
-            for (int i = 0; i < tamanoMatrizX; i++)
-            {
-                for (int j = 0; j < tamanoMatrizY; j++)
-                {
-                    tableroJuego1.obtenerMesa().Controls.Add(matrizJuego[i][j]);
-                }
-
-            }
-            this.Controls.Add(js[0].TPoblado);
-
-
-            //prueba.Controls.Add(lt);
         }
-
-       
-
-       
+        private void Partida_Click(object sender, EventArgs e, int i, int j)
+        {
+            p.matrizJuego[i - 1][j - 1] = p.losetasTrabajadores[0];
+            p.matrizJuego[i - 1][j - 1].IsOculta = false;
+            tableroJuego1.obtenerMesa().Controls.Clear();
+            CargarMatriz();
+            return;
+        }
+        public void CargarMatriz()
+        {
+            for (int i = 0; i < p.tamanoMatrizX; i++)
+            {
+                for (int j = 0; j < p.tamanoMatrizY; j++)
+                {
+                    tableroJuego1.obtenerMesa().Controls.Add(p.matrizJuego[i][j]);
+                }
+            }
+        }
     }
 }

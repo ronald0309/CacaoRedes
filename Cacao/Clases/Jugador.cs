@@ -19,6 +19,7 @@ namespace Cacao.Clases
         private FCacao[] fichasCacao;
         private FSol[] fichasSol;
         private Moneda[] monedas;
+        public LTrabajador[] mazoMano = new LTrabajador[3];
 
         public string Nombre
         {get { return nombre; }set { nombre = value; }}

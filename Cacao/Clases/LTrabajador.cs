@@ -14,6 +14,7 @@ namespace Cacao.Clases
         private int[] meples = new int[4];
         public static string urlImagenOculta = "Reverso";
         public static string urlImagenVisible = "Losa";
+        public bool isSeleccionada = false;
         public LTrabajador(string nombre, bool isOculta,string color, int[] meples)
             : base(nombre, isOculta){
             this.color = color;
@@ -33,6 +34,18 @@ namespace Cacao.Clases
                 inicializarImagenVisible();
             }
         }
+        public void SeleccionarLoseta()
+        {
+
+            if (isSeleccionada)
+            {
+                isSeleccionada = false;
+            }
+            else
+            {
+                isSeleccionada = true;
+            }
+        }
         public void inicializarImageOculta() {
             
             string meplesColor = urlImagenOculta + Colores.seleccionarColor(this.color);
@@ -48,28 +61,6 @@ namespace Cacao.Clases
         {
 
             string meplesColor = urlImagenVisible + Colores.seleccionarColor(this.color);
-
-
-
-            //if (this.color == "Amarillo" || this.color == "Amarilla")
-            //{
-            //    meplesColor = "Amarilla"; urlImagen += meplesColor;
-            //}
-            //if (this.color == "Roja" || this.color == "Rojo")
-            //{
-            //    meplesColor = "Roja"; urlImagen += meplesColor;
-            //}
-            //if (this.color == "Blanca" || this.color == "Blanco")
-            //{
-            //    meplesColor = "Blanca"; urlImagen += meplesColor;
-            //}
-            //if (this.color == "Morada" || this.color == "Morado")
-            //{
-            //    meplesColor = "Morada"; urlImagen += meplesColor;
-            //}
-
-            //urlImagen += meplesColor;
-
             //Carga la imagen de la loseta con el color
             Load(Application.StartupPath + @"\Recursos\" + meplesColor + ".png");
             Location = new System.Drawing.Point(0, 0);
@@ -94,7 +85,7 @@ namespace Cacao.Clases
             }
             if (meples[0] == 1 && meples[1] == 3 && meples[2] == 0 && meples[3] == 0)
             {
-                m.Load(Application.StartupPath + @"\Recursos\" + meplesColor + "P4.png");
+                m.Load(Application.StartupPath + @"\Recursos\" + meplesColor + "P3.png");
             }
             m.Location = new System.Drawing.Point(0, 0);
             // m.SizeMode = PictureBoxSizeMode.CenterImage;

@@ -50,7 +50,7 @@ namespace Cacao.Vistas
             this.BackgroundImage = global::Cacao.Properties.Resources.FondoTebleroJuego;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "TableroJuego";
-            this.Size = new System.Drawing.Size(1431, 1040);
+            this.Size = new System.Drawing.Size(1431, 1035);
             this.ResumeLayout(false);
 
         }

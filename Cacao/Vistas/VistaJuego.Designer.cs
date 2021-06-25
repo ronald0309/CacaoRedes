@@ -33,6 +33,7 @@ namespace Cacao
             this.tableroJuego1 = new Cacao.Vistas.TableroJuego();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.flpMazoMano = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // tableroJuego1
@@ -64,16 +65,23 @@ namespace Cacao
             this.label2.TabIndex = 6;
             this.label2.Text = "MAPA POBLADO";
             // 
+            // flpMazoMano
+            // 
+            this.flpMazoMano.Location = new System.Drawing.Point(1166, 962);
+            this.flpMazoMano.Name = "flpMazoMano";
+            this.flpMazoMano.Size = new System.Drawing.Size(356, 79);
+            this.flpMazoMano.TabIndex = 7;
+            // 
             // VistaJuego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.flpMazoMano);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tableroJuego1);
             this.Controls.Add(this.label1);
-
             this.Name = "VistaJuego";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "VistaJuego";
@@ -89,5 +97,6 @@ namespace Cacao
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel flpMazoMano;
     }
 }

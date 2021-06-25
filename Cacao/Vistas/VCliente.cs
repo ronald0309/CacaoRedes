@@ -79,7 +79,7 @@ namespace Cacao
             {
                 MessageBox.Show("Seleccione un color.");
             }
-            if (contador < 4)
+            if (contador == 4)
             {
                 permiso = true;
             }
