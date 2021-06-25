@@ -29,37 +29,20 @@ namespace Cacao
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableroPoblado2 = new Cacao.TableroPoblado();
-            this.tableroPoblado1 = new Cacao.TableroPoblado();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaJuego));
             this.tableroJuego1 = new Cacao.Vistas.TableroJuego();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // tableroPoblado2
-            // 
-            this.tableroPoblado2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tableroPoblado2.Location = new System.Drawing.Point(12, 98);
-            this.tableroPoblado2.Name = "tableroPoblado2";
-            this.tableroPoblado2.Size = new System.Drawing.Size(419, 399);
-            this.tableroPoblado2.TabIndex = 1;
-            // 
-            // tableroPoblado1
-            // 
-            this.tableroPoblado1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tableroPoblado1.Location = new System.Drawing.Point(12, 564);
-            this.tableroPoblado1.Name = "tableroPoblado1";
-            this.tableroPoblado1.Size = new System.Drawing.Size(419, 399);
-            this.tableroPoblado1.TabIndex = 3;
-            // 
             // tableroJuego1
             // 
             this.tableroJuego1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tableroJuego1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tableroJuego1.BackgroundImage")));
             this.tableroJuego1.Location = new System.Drawing.Point(450, 63);
             this.tableroJuego1.Name = "tableroJuego1";
             this.tableroJuego1.Size = new System.Drawing.Size(1431, 900);
             this.tableroJuego1.TabIndex = 4;
-            //this.tableroJuego1.Load += new System.EventHandler(this.tableroJuego1_Load);
             // 
             // label1
             // 
@@ -88,10 +71,9 @@ namespace Cacao
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.tableroJuego1);
-            this.Controls.Add(this.tableroPoblado1);
-            this.Controls.Add(this.tableroPoblado2);
+            this.Controls.Add(this.label1);
+
             this.Name = "VistaJuego";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "VistaJuego";
@@ -103,8 +85,6 @@ namespace Cacao
 
         #endregion
 
-        private TableroPoblado tableroPoblado2;
-        private TableroPoblado tableroPoblado1;
         private Vistas.TableroJuego tableroJuego1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

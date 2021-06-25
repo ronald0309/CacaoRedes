@@ -19,9 +19,6 @@ namespace Cacao.Vistas
         public FlowLayoutPanel obtenerMesa() {
             return flowLayoutPanel1;
         }
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
     }
 }

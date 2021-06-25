@@ -49,7 +49,7 @@ namespace Cacao.Clases
             this.fichasCacao = new FCacao[5];
             this.fichasSol = new FSol[3];
             this.monedas = new Moneda[48];
-            this.tableroPoblado = new TableroPoblado(/*string color del tablero*/);
+            this.tableroPoblado = new TableroPoblado(this.color);
             this.meeple = new Meeple(this.color);
             inicializarPorJugadores(cantidadJugadores);
         }
