@@ -40,8 +40,8 @@ namespace Cacao.Clases
             Load(Application.StartupPath + @"\Recursos\" + meplesColor + ".png");
             Location = new System.Drawing.Point(0, 0);
             SizeMode = PictureBoxSizeMode.StretchImage;
-            SizeMode = PictureBoxSizeMode.Zoom;
-            Size = new System.Drawing.Size(150, 150);
+            //SizeMode = PictureBoxSizeMode.Zoom;
+            //Size = new System.Drawing.Size(150, 150);
 
         }
         public void inicializarImagenVisible()
@@ -73,9 +73,9 @@ namespace Cacao.Clases
             //Carga la imagen de la loseta con el color
             Load(Application.StartupPath + @"\Recursos\" + meplesColor + ".png");
             Location = new System.Drawing.Point(0, 0);
-            SizeMode = PictureBoxSizeMode.StretchImage;
-            SizeMode = PictureBoxSizeMode.Zoom;
-            Size = new System.Drawing.Size(150, 150);
+            
+            //SizeMode = PictureBoxSizeMode.Zoom;
+            //Size = new System.Drawing.Size(80, 80); Se le cambia el tamaño a las imagenes 
 
             //carga la imagen de los meples con el color y la distribucion correspondiente
             PictureBox m = new PictureBox();
@@ -98,10 +98,13 @@ namespace Cacao.Clases
             }
             m.Location = new System.Drawing.Point(0, 0);
             // m.SizeMode = PictureBoxSizeMode.CenterImage;
+            m.Margin = new Padding(0, 0, 0, 0);
+            m.Padding = new Padding(0, 0, 0, 0);
+            m.Size = new System.Drawing.Size(79, 79);
             m.SizeMode = PictureBoxSizeMode.Zoom;
             //m.Height = this.Height ;
             //m.Width = this.Width ;
-            m.ClientSize = new Size(150, 150);
+            //m.ClientSize = new Size(80, 80); Se le cambia el tamaño a los meples
             m.BackColor = Color.Transparent;
 
             m.Parent = this;

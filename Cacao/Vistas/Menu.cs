@@ -20,7 +20,7 @@ namespace Cacao
             
             InitializeComponent();
 
-            lblTitulo.Parent = pbx1;
+            
 
 
             

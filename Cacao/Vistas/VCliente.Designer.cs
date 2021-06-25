@@ -139,7 +139,7 @@ namespace Cacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Cacao.Properties.Resources.FondoMenu;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.dtpFechaNacimiento);
             this.Controls.Add(this.label3);
@@ -150,6 +150,7 @@ namespace Cacao
             this.Controls.Add(this.lblIP);
             this.Controls.Add(this.btnUnirse);
             this.Controls.Add(this.txtIP);
+            this.DoubleBuffered = true;
             this.Name = "VCliente";
             this.Text = "Cacao";
             this.ResumeLayout(false);

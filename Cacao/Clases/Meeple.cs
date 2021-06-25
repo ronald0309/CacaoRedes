@@ -13,6 +13,7 @@ namespace Cacao.Clases
         public Meeple(string color) {
             this.color = color;
             inicializarMepple(); 
+
         }
         private void inicializarMepple() {
             string urlImage = "meeple" + Colores.seleccionarColor(this.color);
