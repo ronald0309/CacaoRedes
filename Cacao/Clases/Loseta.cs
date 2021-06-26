@@ -19,6 +19,7 @@ namespace Cacao.Clases
             this.Size = new System.Drawing.Size(79, 79);
             this.SizeMode = PictureBoxSizeMode.Zoom;
         }
+        public Loseta() { }
         public string Nombre{
             get { return nombre; }
             set { nombre = value; }

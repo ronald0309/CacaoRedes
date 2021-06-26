@@ -20,6 +20,7 @@ namespace Cacao.Clases
         private FSol[] fichasSol;
         private Moneda[] monedas;
         public LTrabajador[] mazoMano = new LTrabajador[3];
+        public LTrabajador SELECCIONADA = new LTrabajador();
 
         public string Nombre
         {get { return nombre; }set { nombre = value; }}
@@ -61,6 +62,10 @@ namespace Cacao.Clases
                 this.losetasTrabajadores = new LTrabajador[10];
             } else if (cantidadJugadores == 4) {
                 this.losetasTrabajadores = new LTrabajador[9];
+            }
+
+            for (int i=0;i<mazoMano.Length;i++) {
+                mazoMano[i] = new LTrabajador();
             }
         }
         

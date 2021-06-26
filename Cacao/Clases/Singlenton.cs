@@ -20,6 +20,8 @@ namespace Cacao.Clases
 
             }
         }
-        public Jugador nj = new Jugador("J", 10, "rojo", 3);
+        //public Jugador nj = new Jugador("J", 10, "rojo", 3);
+        public LTrabajador SELECCIONADA = null;
+
     }
 }
