@@ -26,14 +26,25 @@ namespace Cacao
             js[3] = new Jugador("Farrr xdr", 12, "Lima", js.Length);
             p = new Partida(ss,"JAJA",0,js);
 
-            InicializarMatriz();
-            CargarMatriz();
+            //InicializarMatriz();
+            //CargarMatriz();
             flpMazoMano.Controls.Add(p.jugadores[0].LosetasTrabajadores[0]);
             flpMazoMano.Controls.Add(p.jugadores[0].LosetasTrabajadores[1]);
             flpMazoMano.Controls.Add(p.jugadores[0].LosetasTrabajadores[2]);
-
+            //tableroJuego1.obtenerMesa().Cursor = new Cursor(Cursor.GetType(),"Select");
+            //if (tableroJuego1.obtenerMesa()) {
+            //    MessageBox.Show("AUCH...");
+            //};
             this.Controls.Add(js[0].TPoblado);
         }
+
+        public void iniMat() {
+            foreach (LTrabajador l in p.jugadores[0].LosetasTrabajadores) { 
+                //tableroJuego1.
+            }
+            
+        }
+
         public void InicializarMatriz()
         {
             p.matrizJuego = new LTrabajador[p.tamanoMatrizX][];
