@@ -24,11 +24,6 @@ namespace Cacao.Clases
         Moneda[] monedas;
 
 
-        //Matriz de juego 
-        public int tamanoMatrizX = 18;
-        public int tamanoMatrizY = 11;
-        public LTrabajador[][] matrizJuego;
-        int x, y;
 
         int cartaActual;
 
@@ -57,6 +52,7 @@ namespace Cacao.Clases
             this.monedas = new Moneda[48];
             
             inicializarLosetasTrabajadores();
+            //inicializarMazoVisible();
             //barajar(jugadores.Length);
             inicializarTablerosPoblados();
             inicializarLosetasJungla();
@@ -68,6 +64,8 @@ namespace Cacao.Clases
             inicializarBarajasJugadores();
 
         }
+
+       
 
         private void inicializarLosetasTrabajadores()
         {

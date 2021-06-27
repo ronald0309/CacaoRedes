@@ -89,6 +89,10 @@ namespace Cacao.Clases
             } else if (cantidadJugadores == 4) {
                 this.losetasTrabajadores = new LTrabajador[9];
             }
+
+            //for (int i=0;i<mazoMano.Length;i++) {
+            //    mazoMano[i] = new LTrabajador();
+            //}
         }
         
     }

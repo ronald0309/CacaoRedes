@@ -28,6 +28,7 @@ namespace Cacao
             this.Hide();
             vCliente.ShowDialog();
             this.Close();
+
         }
 
         private void ActUnirse(object sender, EventArgs e)

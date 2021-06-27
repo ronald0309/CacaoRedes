@@ -39,6 +39,7 @@ namespace Cacao.Sock
             {
                 MessageBox.Show(e.ToString());
             }
+
         }
 
         public void Start()
@@ -54,14 +55,15 @@ namespace Cacao.Sock
                 s_Server.Listen(10);
                 
                 // Start listening for connections.  
-                while (true)
-                {
+                while (true){
+
                     //bytes = new byte[1024];
-                    Console.WriteLine("Esperando una conexión...");
+                    MessageBox.Show("Esperando una conexión...");
                     //El programa espera acá, mientras le llega una solicitud de conexión
                     MessageBox.Show("Esperando conexion");
                     s_Client = s_Server.Accept();
                     MessageBox.Show("Conectado");
+
                     data = null;
                     while (true)
                     {

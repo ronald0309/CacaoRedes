@@ -1,8 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "I2DyMQwwPJRpplgG6GIeOSk8Oywfj8mhardkqD8wT02oO9ZEL9xOS/wnNrYyeHVTtDL/6eSKukKrXaxOW1U/Bw==",
+  "dgSpecHash": "PBkHP86bpPYPJjLLe+mSu54rAEQPDqd/OI3mQS7Ff1wmPC6OWJFKo+sGE094cISUNIUT00MXLUegby6+GbN7mw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ronny\\Documents\\GitHub\\CacaoRedes\\Cacao\\Cacao.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\Ronny\\.nuget\\packages\\control.draggable\\1.0.5049.269\\control.draggable.1.0.5049.269.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\Ronny\\Documents\\GitHub\\CacaoRedes\\Cacao\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Control.Draggable 1.0.5049.269\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v3.1\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Control.Draggable",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

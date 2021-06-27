@@ -66,6 +66,7 @@ namespace Cacao.Sock
             catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
+                MessageBox.Show("Conexión rechazada, intente nuevamente");
                 return "Conexión rechazada, intente nuevamente.";
             }
         }

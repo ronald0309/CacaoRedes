@@ -40,7 +40,9 @@ namespace Cacao
             // 
             this.tableroJuego1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.tableroJuego1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tableroJuego1.BackgroundImage")));
+            this.tableroJuego1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tableroJuego1.Location = new System.Drawing.Point(450, 63);
+            this.tableroJuego1.Margin = new System.Windows.Forms.Padding(0);
             this.tableroJuego1.Name = "tableroJuego1";
             this.tableroJuego1.Size = new System.Drawing.Size(1431, 900);
             this.tableroJuego1.TabIndex = 4;
@@ -96,7 +98,6 @@ namespace Cacao
         private Vistas.TableroJuego tableroJuego1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flpMazoMano;
     }
 }
