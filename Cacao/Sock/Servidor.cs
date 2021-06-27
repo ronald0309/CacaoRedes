@@ -25,7 +25,7 @@ namespace Cacao.Sock
 
         public Servidor(string ip, int port)
         {
-            host = Dns.GetHostEntry(Dns.GetHostName());
+            host = Dns.GetHostEntry(ip);
             ipAddr = host.AddressList[0];
             endPoint = new IPEndPoint(ipAddr, port);
 
@@ -47,14 +47,14 @@ namespace Cacao.Sock
                 s_Server.Listen(10);
                 MessageBox.Show("Conecct");
                 // Start listening for connections.  
-                while (true)
-                {
+                while (true){
+
                     //bytes = new byte[1024];
-                    Console.WriteLine("Esperando una conexión...");
+                    MessageBox.Show("Esperando una conexión...");
                     //El programa espera acá, mientras le llega una solicitud de conexión
                     MessageBox.Show("Conecct");
                     s_Client = s_Server.Accept();
-                    MessageBox.Show("Conecct");
+                    //MessageBox.Show("Conecct");
                     data = null;
                     while (true)
                     {

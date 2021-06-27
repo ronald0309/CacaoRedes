@@ -11,7 +11,9 @@ namespace Cacao.Vistas
 {
     public partial class TableroJuego : UserControl
     {
-        PictureBox[,] l;
+        public PictureBox[,] matrizTablero;
+        public int matX = 18;
+        public int matY = 11;
         public TableroJuego()
         {
             InitializeComponent();
@@ -20,57 +22,100 @@ namespace Cacao.Vistas
 
         public void cargarVista()
         {
-            int matX = 18;
-            int matY = 11;
-            l = new PictureBox[matX, matY];
+            
+            matrizTablero = new PictureBox[matX, matY];
             int[] k = { 1, 1, 1, 1 };
 
             this.flowLayoutPanel1.BorderStyle = BorderStyle.Fixed3D;
             //this.flowLayoutPanel1.BringToFront();
-            for (int i = 0; i < matX; i++)
-            {
-                for (int j = 0; j < matY; j++)
-                {
-                    l[i, j] = new LTrabajador("Loseta Trabajador",true,"Lima",k);
-                    //l[i, j] = new PictureBox();
-                    l[i, j].Margin = new Padding(0, 0, 0, 0);
-                    l[i, j].Padding = new Padding(0, 0, 0, 0);
-                    l[i, j].Size = new Size(79, 79);
-                    l[i, j].SizeMode = PictureBoxSizeMode.Zoom;
-
-                    l[i, j].BorderStyle = BorderStyle.Fixed3D;
-                    this.flowLayoutPanel1.Controls.Add(l[i, j]);
-                    //l[i, j].Image = null;
-                    l[i, j].Click += (sendr, EventArgs) => { ClickLoseta(sendr, EventArgs); };
-                }
-            }
+            
 
         }
+
+        private void control_mouse_al_terminar_arrastre(object sendr, DragEventArgs e, int v)
+        {
+            PictureBox pic = (PictureBox)sendr;
+            PictureBox org = Singlenton.Instance.SELECCIONADA;
+
+            if (pic.Image != org.Image)
+            {
+
+                pic.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+                org.Image = null;
+                Singlenton.Instance.SELECCIONADA=null;
+                Singlenton.Instance.fueMovida = true;
+            }
+        }
+
+        private void control_mouse_al_arrastrar(object sendr, DragEventArgs e, int v)
+        {
+            if (e.Data.GetDataPresent(DataFormats.Bitmap))
+            {
+                e.Effect = DragDropEffects.Move;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
+
+        private void control_mouse_al_presionar(object sendr, MouseEventArgs e, int v)
+        {
+            //Mouse Down
+
+            //PictureBox pic = (PictureBox)sendr;
+            //Singlenton.Instance.SELECCIONADA = (LTr)sendr;
+
+
+            //if (e.Button == MouseButtons.Left)
+            //{
+            //    {
+            //        if (pic.Image != null)
+            //        {
+            //            pic.DoDragDrop(pic.Image, DragDropEffects.Move);
+
+            //        }
+            //    }
+            //}
+        }
+
         private void ClickLoseta(object sender, EventArgs e)
         {
-            MessageBox.Show("Auch... Pinchaste la posición ["+ flowLayoutPanel1.Controls.GetChildIndex((PictureBox) sender)+"]");
+            
             if (Singlenton.Instance.SELECCIONADA != null)
             {
+                MessageBox.Show("Auch... Pinchaste la posición ["+ flowLayoutPanel1.Controls.GetChildIndex((PictureBox) sender)+"]");
                 //flowLayoutPanel1.Controls.Remove((Control)sender);
                 //flowLayoutPanel1.Refresh();
                 //flowLayoutPanel1.ResumeLayout();
                 flowLayoutPanel1.Controls.Add(Singlenton.Instance.SELECCIONADA);// .SetChildIndex(Singlenton.Instance.SELECCIONADA, flowLayoutPanel1.Controls.GetChildIndex((PictureBox)sender));
-                Singlenton.Instance.SELECCIONADA.SeleccionarLoseta();
+               // Singlenton.Instance.SELECCIONADA.SeleccionarLoseta();
 
                 Singlenton.Instance.SELECCIONADA = null;
+                //VistaJuego.car
             }
             else {
                 //flowLayoutPanel1.SuspendLayout();
+                MessageBox.Show("Auch... ["+ flowLayoutPanel1.Controls.GetChildIndex((PictureBox) sender)+"]");
+
             }
         }
 
-        
+        private void Loseta_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Copy;
+            else
+                e.Effect = DragDropEffects.None;
+        }
 
 
-        //public FlowLayoutPanel obtenerMesa() {
 
-        //    return flowLayoutPanel1;
-        //}
+
+        public FlowLayoutPanel obtenerMesa() {
+
+            return flowLayoutPanel1;
+        }
 
     }
 }

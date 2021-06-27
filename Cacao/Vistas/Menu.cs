@@ -23,8 +23,9 @@ namespace Cacao
 
         private void ActCrear(object sender, EventArgs e)
         {
-            Servidor servidor = new Servidor("192.168.8.103", 1234);
+            Servidor servidor = new Servidor("25.2.29.214", 12975);
             servidor.Start();
+            servidor.clientReceive();
         }
 
         private void ActUnirse(object sender, EventArgs e)

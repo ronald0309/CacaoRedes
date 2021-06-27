@@ -35,7 +35,7 @@ namespace Cacao
         {
             if (ValidarDatos())
             {
-                Cliente cliente = new Cliente("192.168.8.103", 1234);
+                Cliente cliente = new Cliente(txtIP.Text, 8080);
                 cliente.Start();
                 // Clases.Loseta l = new Loseta("Loseta 1", 1);
                 //cliente.sendObject(l);

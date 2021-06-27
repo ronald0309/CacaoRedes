@@ -34,24 +34,30 @@ namespace Cacao.Vistas
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1430, 900);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1428, 860);
             this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.DragEnter += new System.Windows.Forms.DragEventHandler(this.Loseta_DragEnter);
             // 
             // TableroJuego
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::Cacao.Properties.Resources.FondoTebleroJuego;
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "TableroJuego";
-            this.Size = new System.Drawing.Size(1431, 1035);
+            this.Size = new System.Drawing.Size(1428, 860);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
