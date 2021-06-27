@@ -15,11 +15,11 @@ namespace Cacao
         Servidor ss = new Servidor("192.168.100.45", 8080);
         Jugador[] js = new Jugador[4];
         Partida p;
-
+        public int numeroJugador;
 
         public VistaJuego()
         {
-            
+            numeroJugador = 2;
             js[0] = new Jugador("Far",22,"Rojo",js.Length);
             js[1] = new Jugador("Farlol", 22, "Azul", js.Length);
             js[2] = new Jugador("Farrrrr", 12, "Blanco", js.Length);
@@ -119,23 +119,22 @@ namespace Cacao
             int cont = 0;
             //if (Singlenton.Instance.fueMovida)
             {
-                foreach (LTrabajador L in p.jugadores[0].mazoMano)
+                foreach (LTrabajador L in p.jugadores[numeroJugador].mazoMano)
                 {
 
                     if (L == null)
                     {
-                        for (int i = 0; i < p.jugadores[0].LosetasTrabajadores.Length; i++)
+                        for (int i = 0; i < p.jugadores[numeroJugador].LosetasTrabajadores.Length; i++)
                         {
-                            if (p.jugadores[0].LosetasTrabajadores[i] != null)
+                            if (p.jugadores[numeroJugador].LosetasTrabajadores[i] != null)
                             {
-                                p.jugadores[0].mazoMano[cont] = p.jugadores[0].LosetasTrabajadores[i];
-                                p.jugadores[0].LosetasTrabajadores[i] = null;
-                                p.jugadores[0].mazoMano[cont].AllowDrop = true;
-                                p.jugadores[0].mazoMano[cont].MouseDown += (sendr, EventArgs) => { control_mouse_al_presionar(sendr, EventArgs, 0, cont); };
-                                p.jugadores[0].mazoMano[cont].DragEnter += (sendr, EventArgs) => { control_mouse_al_arrastrar(sendr, EventArgs, 0, cont); };
-                                //p.jugadores[0].mazoMano[cont].DragDrop += (sendr, EventArgs) => { control_mouse_al_terminar_arrastre(sendr, EventArgs, 0, cont); };
-                                p.jugadores[0].mazoMano[cont].MouseHover += (sendr, EventArgs) => { control_mouse_sobre(sendr, EventArgs); };
-                                p.jugadores[0].mazoMano[cont].MouseLeave += (sendr, EventArgs) => { control_mouse_sale(sendr, EventArgs); };
+                                p.jugadores[numeroJugador].mazoMano[cont] = p.jugadores[numeroJugador].LosetasTrabajadores[i];
+                                p.jugadores[numeroJugador].LosetasTrabajadores[i] = null;
+                                p.jugadores[numeroJugador].mazoMano[cont].AllowDrop = true;
+                                p.jugadores[numeroJugador].mazoMano[cont].MouseDown += (sendr, EventArgs) => { control_mouse_al_presionar(sendr, EventArgs, 0, cont); };
+                                p.jugadores[numeroJugador].mazoMano[cont].DragEnter += (sendr, EventArgs) => { control_mouse_al_arrastrar(sendr, EventArgs, 0, cont); };
+                                p.jugadores[numeroJugador].mazoMano[cont].MouseHover += (sendr, EventArgs) => { control_mouse_sobre(sendr, EventArgs); };
+                                p.jugadores[numeroJugador].mazoMano[cont].MouseLeave += (sendr, EventArgs) => { control_mouse_sale(sendr, EventArgs); };
                                 //p.jugadores[0].mazoMano[cont].QueryContinueDrag  += (sendr, EventArgs) => { control_mouse_change(sendr, EventArgs); };
 
 
@@ -144,7 +143,7 @@ namespace Cacao
                             }
                         }
                     }
-                    flpMazoMano.Controls.Add(p.jugadores[0].mazoMano[cont]);
+                    flpMazoMano.Controls.Add(p.jugadores[numeroJugador].mazoMano[cont]);
                     cont += 1;
 
                 }
@@ -166,18 +165,18 @@ namespace Cacao
                     foreach (LTrabajador L in flpMazoMano.Controls) {
 
                 if (L.Image == null) {
-                    for (int i = 0; i < p.jugadores[0].LosetasTrabajadores.Length; i++)
+                    for (int i = 0; i < p.jugadores[numeroJugador].LosetasTrabajadores.Length; i++)
                     {
-                        if (p.jugadores[0].LosetasTrabajadores[i] != null)
+                        if (p.jugadores[numeroJugador].LosetasTrabajadores[i] != null)
                         {
-                            p.jugadores[0].mazoMano[cont] = p.jugadores[0].LosetasTrabajadores[i];
-                            p.jugadores[0].LosetasTrabajadores[i]= null;
-                            p.jugadores[0].mazoMano[cont].AllowDrop = true;
-                            p.jugadores[0].mazoMano[cont].MouseDown += (sendr, EventArgs) => { control_mouse_al_presionar(sendr, EventArgs, 0, cont); };
-                            p.jugadores[0].mazoMano[cont].DragEnter += (sendr, EventArgs) => { control_mouse_al_arrastrar(sendr, EventArgs, 0, cont); };
+                            p.jugadores[numeroJugador].mazoMano[cont] = p.jugadores[numeroJugador].LosetasTrabajadores[i];
+                            p.jugadores[numeroJugador].LosetasTrabajadores[i]= null;
+                            p.jugadores[numeroJugador].mazoMano[cont].AllowDrop = true;
+                            p.jugadores[numeroJugador].mazoMano[cont].MouseDown += (sendr, EventArgs) => { control_mouse_al_presionar(sendr, EventArgs, 0, cont); };
+                            p.jugadores[numeroJugador].mazoMano[cont].DragEnter += (sendr, EventArgs) => { control_mouse_al_arrastrar(sendr, EventArgs, 0, cont); };
                             //p.jugadores[0].mazoMano[cont].DragDrop += (sendr, EventArgs) => { control_mouse_al_terminar_arrastre(sendr, EventArgs, 0, cont); };
-                            p.jugadores[0].mazoMano[cont].MouseHover += (sendr, EventArgs) => { control_mouse_sobre(sendr, EventArgs); };
-                            p.jugadores[0].mazoMano[cont].MouseLeave += (sendr, EventArgs) => { control_mouse_sale(sendr, EventArgs); };
+                            p.jugadores[numeroJugador].mazoMano[cont].MouseHover += (sendr, EventArgs) => { control_mouse_sobre(sendr, EventArgs); };
+                            p.jugadores[numeroJugador].mazoMano[cont].MouseLeave += (sendr, EventArgs) => { control_mouse_sale(sendr, EventArgs); };
                             //p.jugadores[0].mazoMano[cont].QueryContinueDrag  += (sendr, EventArgs) => { control_mouse_change(sendr, EventArgs); };
 
                             
@@ -194,7 +193,7 @@ namespace Cacao
             flpMazoMano.Controls.Clear();
             for (int i = 0; i < 3; i++)
             {
-                    flpMazoMano.Controls.Add(p.jugadores[0].mazoMano[i]);
+                    flpMazoMano.Controls.Add(p.jugadores[numeroJugador].mazoMano[i]);
                 }
                 //Singlenton.Instance.fueMovida = false;
             }

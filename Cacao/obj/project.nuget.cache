@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "g0oVmC6oDHHKpxKyzCPYUYtNqoO15ETqoRuSPH3wq89TLOwSKQkWnc8i3TBhawXkAO7lye7yD0pOLDc2wBCHzw==",
+  "dgSpecHash": "PBkHP86bpPYPJjLLe+mSu54rAEQPDqd/OI3mQS7Ff1wmPC6OWJFKo+sGE094cISUNIUT00MXLUegby6+GbN7mw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\CacaoRedes\\Cacao\\Cacao.csproj",
+  "projectFilePath": "C:\\Users\\Ronny\\Documents\\GitHub\\CacaoRedes\\Cacao\\Cacao.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\User\\.nuget\\packages\\control.draggable\\1.0.5049.269\\control.draggable.1.0.5049.269.nupkg.sha512"
+    "C:\\Users\\Ronny\\.nuget\\packages\\control.draggable\\1.0.5049.269\\control.draggable.1.0.5049.269.nupkg.sha512"
   ],
   "logs": [
     {
