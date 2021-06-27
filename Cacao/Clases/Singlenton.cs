@@ -15,11 +15,11 @@ namespace Cacao.Clases
             {
                 if (instance == null)
                     instance = new Singlenton();
-
                 return instance;
 
             }
         }
         public Jugador nj = new Jugador("J", 10, "rojo", 3);
+        
     }
 }

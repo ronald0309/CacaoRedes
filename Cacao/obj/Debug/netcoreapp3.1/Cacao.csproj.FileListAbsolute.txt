@@ -14,7 +14,6 @@ C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.p
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.genruntimeconfig.cache
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.Properties.Resources.resources
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.Menu.resources
-C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.VCliente.resources
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.VistaJuego.resources
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.TableroPoblado.resources
 C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.csprojAssemblyReference.cache
@@ -38,3 +37,5 @@ C:\Users\User\Desktop\CacaoRedes\Cacao\bin\Debug\netcoreapp3.1\Cacao.pdb
 C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.genruntimeconfig.cache
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.Vistas.TableroJuego.resources
 C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.Vistas.TableroJuego.resources
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.VistaCliente.resources
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.Vistas.VistaServidor.resources

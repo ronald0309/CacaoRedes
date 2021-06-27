@@ -2,12 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Cacao.Clases
 {
     class Jugador{
         //Jugador datos
         private Cliente cliente;
+        private int numeroJugador;
         private string nombre;
         private int edad;
         private string color;
@@ -19,8 +21,7 @@ namespace Cacao.Clases
         private FCacao[] fichasCacao;
         private FSol[] fichasSol;
         private Moneda[] monedas;
-        public LTrabajador[] mazoMano = new LTrabajador[3];
-
+        public  PictureBox[] masoMano = new LTrabajador[3];
         public string Nombre
         {get { return nombre; }set { nombre = value; }}
         public int Edad
@@ -52,9 +53,35 @@ namespace Cacao.Clases
             this.monedas = new Moneda[48];
             this.tableroPoblado = new TableroPoblado(this.color);
             this.meeple = new Meeple(this.color);
-            inicializarPorJugadores(cantidadJugadores);
+            InicializarPorJugadores(cantidadJugadores);
+            CargarMasoMano();
+
         }
-        private void inicializarPorJugadores(int cantidadJugadores){
+        public void CargarMasoMano() {
+
+            for (int i=0; i < losetasTrabajadores.Length; i++) {
+                if (losetasTrabajadores[i] != null)
+                {
+                    
+                    for (int j = 0; j < 3; j++)
+                    {
+                        if (masoMano[j] == null)
+                        {
+                            masoMano[j] = new LTrabajador();
+
+                            masoMano[j] = losetasTrabajadores[i];
+                            
+                            losetasTrabajadores[i] = null;
+                           
+                        }
+                    }
+                    
+                }
+                
+            }
+        }
+        
+        private void InicializarPorJugadores(int cantidadJugadores){
             if (cantidadJugadores == 2) {
                 this.losetasTrabajadores = new LTrabajador[11];
             } else if (cantidadJugadores == 3) {

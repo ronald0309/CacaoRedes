@@ -23,6 +23,10 @@ namespace Cacao.Clases
 
             voltearLoseta();
         }
+        public LTrabajador():base("",false)
+        {
+            
+        }
         public void voltearLoseta()
         {
             if (this.IsOculta)

@@ -25,12 +25,14 @@ namespace Cacao
             js[2] = new Jugador("Farrrrr", 12, "Blanco", js.Length);
             js[3] = new Jugador("Farrr xdr", 12, "Lima", js.Length);
             p = new Partida(ss,"JAJA",0,js);
-
-            //InicializarMatriz();
-            //CargarMatriz();
-            flpMazoMano.Controls.Add(p.jugadores[0].LosetasTrabajadores[0]);
-            flpMazoMano.Controls.Add(p.jugadores[0].LosetasTrabajadores[1]);
-            flpMazoMano.Controls.Add(p.jugadores[0].LosetasTrabajadores[2]);
+            
+            InicializarMatriz();
+            p.jugadores[0].CargarMasoMano();
+            CargarMasoMano();
+            ////CargarMatriz();
+            //flpMazoMano.Controls.Add(p.jugadores[0].LosetasTrabajadores[0]);
+            //flpMazoMano.Controls.Add(p.jugadores[0].LosetasTrabajadores[1]);
+            //flpMazoMano.Controls.Add(p.jugadores[0].LosetasTrabajadores[2]);
             //tableroJuego1.obtenerMesa().Cursor = new Cursor(Cursor.GetType(),"Select");
             //if (tableroJuego1.obtenerMesa()) {
             //    MessageBox.Show("AUCH...");
@@ -44,31 +46,49 @@ namespace Cacao
             }
             
         }
-
+        public void CargarMasoMano()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+               // p.jugadores[0].masoMano[i] = new PictureBox();
+                p.jugadores[0].CargarMasoMano();
+                //p.jugadores[0].masoMano[i].IsOculta = true;
+                //p.jugadores[0].masoMano[i].voltearLoseta();
+                p.jugadores[0].masoMano[i].Click += (sendr, EventArgs) => { ClickMasoMano(sendr, EventArgs); };
+                
+                flpMazoMano.Controls.Add(p.jugadores[0].masoMano[i]);
+            }
+        }
+        private void ClickMasoMano(object sender, EventArgs e)
+        {
+            MessageBox.Show("Auch... Pinchaste la posición [" + this.flpMazoMano.Controls.GetChildIndex((LTrabajador)sender) + "]");
+        }
         public void InicializarMatriz()
         {
-            p.matrizJuego = new LTrabajador[p.tamanoMatrizX][];
-            for (int i = 0; i < p.tamanoMatrizX; i++)
+            int matX = 18;
+            int matY = 11;
+            //int[] k = { 1, 1, 1, 1 };
+
+            this.tableroJuego1.obtenerMesa().BorderStyle = BorderStyle.Fixed3D;
+            for (int i = 0; i < matX; i++)
             {
-                p.matrizJuego[i] = new LTrabajador[p.tamanoMatrizY];
-            }
-            for (int i = 0; i < p.tamanoMatrizX; i++)
-            {
-                for (int j = 0; j < p.tamanoMatrizY; j++)
+                for (int j = 0; j < matY; j++)
                 {
-                    int[] posicionesCartasTrabajadores = { 1, 1, 1, 1 };
-                    p.matrizJuego[i][j] = new LTrabajador("Loseta Trabajador", true, "Rojo", posicionesCartasTrabajadores);
-                    p.matrizJuego[i][j].Click += (sendr, EventArgs) => { Partida_Click(sendr, EventArgs, i, j); };
+                    //l[i, j] = new LTrabajador("Loseta Trabajador",true,"Lima",k);
+                    tableroJuego1.l[i, j] = new PictureBox();
+                    tableroJuego1.l[i, j].Margin = new Padding(0, 0, 0, 0);
+                    tableroJuego1.l[i, j].Padding = new Padding(0, 0, 0, 0);
+                    tableroJuego1.l[i, j].Size = new Size(79, 79);
+                    tableroJuego1.l[i, j].SizeMode = PictureBoxSizeMode.Zoom;
+                    this.tableroJuego1.obtenerMesa().Controls.Add(tableroJuego1.l[i, j]);
+                    //l[i, j].Image = null;
+                    tableroJuego1.l[i, j].Click += (sendr, EventArgs) => { ClickLoseta(sendr, EventArgs); };
                 }
             }
         }
-        private void Partida_Click(object sender, EventArgs e, int i, int j)
+        private void ClickLoseta(object sender, EventArgs e)
         {
-            p.matrizJuego[i - 1][j - 1] = p.losetasTrabajadores[0];
-            p.matrizJuego[i - 1][j - 1].IsOculta = false;
-            tableroJuego1.obtenerMesa().Controls.Clear();
-            CargarMatriz();
-            return;
+            MessageBox.Show("Auch... Pinchaste la posición [" + this.tableroJuego1.obtenerMesa().Controls.GetChildIndex((PictureBox)sender) + "]");
         }
         public void CargarMatriz()
         {
@@ -80,5 +100,6 @@ namespace Cacao
                 }
             }
         }
+        
     }
 }

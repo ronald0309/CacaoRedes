@@ -39,7 +39,7 @@ namespace Cacao.Vistas
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1430, 900);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1428, 880);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // TableroJuego
@@ -50,7 +50,7 @@ namespace Cacao.Vistas
             this.BackgroundImage = global::Cacao.Properties.Resources.FondoTebleroJuego;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "TableroJuego";
-            this.Size = new System.Drawing.Size(1431, 1035);
+            this.Size = new System.Drawing.Size(1428, 880);
             this.ResumeLayout(false);
 
         }

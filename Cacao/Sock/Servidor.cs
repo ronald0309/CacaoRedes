@@ -25,13 +25,20 @@ namespace Cacao.Sock
 
         public Servidor(string ip, int port)
         {
-            host = Dns.GetHostEntry(Dns.GetHostName());
-            ipAddr = host.AddressList[0];
-            endPoint = new IPEndPoint(ipAddr, port);
-
-            // Create a TCP/IP socket.  
-            s_Server = new Socket(ipAddr.AddressFamily,
-            SocketType.Stream, ProtocolType.Tcp);
+            try
+            {
+                host = Dns.GetHostEntry(ip);
+                ipAddr = host.AddressList[0];
+                endPoint = new IPEndPoint(ipAddr, port);
+                MessageBox.Show(host.AddressList[0].ToString());
+                // Create a TCP/IP socket.  
+                s_Server = new Socket(ipAddr.AddressFamily,
+                SocketType.Stream, ProtocolType.Tcp);
+            }
+            catch( Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
         }
 
         public void Start()
@@ -45,16 +52,16 @@ namespace Cacao.Sock
                 s_Server.Bind(endPoint);
                 //numero de clientes permitidos
                 s_Server.Listen(10);
-                MessageBox.Show("Conecct");
+                
                 // Start listening for connections.  
                 while (true)
                 {
                     //bytes = new byte[1024];
                     Console.WriteLine("Esperando una conexión...");
                     //El programa espera acá, mientras le llega una solicitud de conexión
-                    MessageBox.Show("Conecct");
+                    MessageBox.Show("Esperando conexion");
                     s_Client = s_Server.Accept();
-                    MessageBox.Show("Conecct");
+                    MessageBox.Show("Conectado");
                     data = null;
                     while (true)
                     {
@@ -63,15 +70,12 @@ namespace Cacao.Sock
 
                         Loseta l = recibirLoseta(s_Client);
                         if (l.IsOculta) {
-                            // Loseta l = new Loseta("Loseta 1", 3);
+                            //Loseta l = new Loseta("Loseta 1", 3);
                             //MessageBox.Show(datos);
                             l.Nombre = "Loseta recibida";
-
                             s_Client.Send(BinSerial.Serializar(l));
                             break;
                         }
-                       
-
                         //break;
                     }
                     Console.WriteLine("Text received : {0}", data);

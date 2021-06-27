@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Cacao.Sock;
 using Cacao.Clases;
 using System.Drawing.Imaging;
+using Cacao.Vistas;
 
 namespace Cacao
 {
@@ -23,13 +24,15 @@ namespace Cacao
 
         private void ActCrear(object sender, EventArgs e)
         {
-            Servidor servidor = new Servidor("192.168.8.103", 1234);
-            servidor.Start();
+            VistaServidor vCliente = new VistaServidor();
+            this.Hide();
+            vCliente.ShowDialog();
+            this.Close();
         }
 
         private void ActUnirse(object sender, EventArgs e)
         {
-            VCliente vCliente = new VCliente();
+            VistaCliente vCliente = new VistaCliente();
             this.Hide();
             vCliente.ShowDialog();
             this.Close();

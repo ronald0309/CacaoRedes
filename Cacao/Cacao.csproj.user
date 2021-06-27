@@ -31,10 +31,13 @@
     <Compile Update="Vistas\TableroJuego.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Vistas\VCliente.cs">
+    <Compile Update="Vistas\VistaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Vistas\VistaJuego.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vistas\VistaServidor.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

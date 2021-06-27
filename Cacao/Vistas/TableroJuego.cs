@@ -11,7 +11,7 @@ namespace Cacao.Vistas
 {
     public partial class TableroJuego : UserControl
     {
-        PictureBox[,] l;
+        public PictureBox[,] l;
         public TableroJuego()
         {
             InitializeComponent();
@@ -23,31 +23,8 @@ namespace Cacao.Vistas
             int matX = 18;
             int matY = 11;
             l = new PictureBox[matX, matY];
-            int[] k = { 1, 1, 1, 1 };
-
-            this.flowLayoutPanel1.BorderStyle = BorderStyle.Fixed3D;
-            //this.flowLayoutPanel1.BringToFront();
-            for (int i = 0; i < matX; i++)
-            {
-                for (int j = 0; j < matY; j++)
-                {
-                    //l[i, j] = new LTrabajador("Loseta Trabajador",true,"Lima",k);
-                    l[i, j] = new PictureBox();
-                    l[i, j].Margin = new Padding(0, 0, 0, 0);
-                    l[i, j].Padding = new Padding(0, 0, 0, 0);
-                    l[i, j].Size = new Size(79, 79);
-                    l[i, j].SizeMode = PictureBoxSizeMode.Zoom;
-                    this.flowLayoutPanel1.Controls.Add(l[i, j]);
-                    //l[i, j].Image = null;
-                    l[i, j].Click += (sendr, EventArgs) => { ClickLoseta(sendr, EventArgs); };
-                }
-            }
-
         }
-        private void ClickLoseta(object sender, EventArgs e)
-        {
-            MessageBox.Show("Auch... Pinchaste la posición ["+ flowLayoutPanel1.Controls.GetChildIndex((PictureBox) sender)+"]");
-        }
+        
         public FlowLayoutPanel obtenerMesa() {
             
             return flowLayoutPanel1;
