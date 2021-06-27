@@ -23,8 +23,13 @@ namespace Cacao.Sock
 
         string data;
 
+
+        public Jugador[] jugadores;
+        public int contador =0;
+
         public Servidor(string ip, int port)
         {
+            jugadores = new Jugador[4];
             try
             {
                 host = Dns.GetHostEntry(ip);
@@ -69,6 +74,21 @@ namespace Cacao.Sock
                     {
                         //validaciones, qué sucede si hay conexion? qué pregunta, envia o recibe el server? todo aquí.
                         //s_Client.Receive(bytes);
+                        try {
+                            jugadores[contador] = new Jugador();
+                            //jugadores[contador] = new Jugador();
+                            jugadores[contador] = RecibirJugador();
+                            Singlenton.Instance.lblUsuarios.Text = jugadores[contador].Nombre;
+                            Singlenton.Instance.lblUsuarios.Refresh();
+                           contador += 1;
+                            //s_Client.Send(BinSerial.Serializar(nombre));
+                            //Singlenton.Instance.lblUsuarios.Text = "";
+                            break;
+                        }
+                        catch (Exception e) { 
+                        }
+                        
+
 
                         Loseta l = recibirLoseta(s_Client);
                         if (l.IsOculta) {
@@ -76,7 +96,7 @@ namespace Cacao.Sock
                             //MessageBox.Show(datos);
                             l.Nombre = "Loseta recibida";
                             s_Client.Send(BinSerial.Serializar(l));
-                            break;
+                            continue;
                         }
                         //break;
                     }
@@ -92,6 +112,8 @@ namespace Cacao.Sock
             Console.WriteLine("\nPress ENTER to continue...");
             Console.Read();
         }
+
+       
 
         public void Send(string msj)
         {
@@ -136,10 +158,6 @@ namespace Cacao.Sock
             if (recibido.IndexOf("<EOF>") > -1)
             {
                 recibido = recibido.Remove(recibido.Length - 5);
-                if (recibido == "Conectado" ) { 
-
-                }
-
             }
             return recibido;
         }
@@ -147,7 +165,7 @@ namespace Cacao.Sock
         {
             string recibido = "";
             Jugador l;
-            byte[] buffer = new byte[1024];
+            byte[] buffer = new byte[2048];
             s_Client.Receive(buffer);
             l = (Jugador)BinSerial.Deserializar(buffer);
             MessageBox.Show(l.Nombre + "||" + l.Nombre);

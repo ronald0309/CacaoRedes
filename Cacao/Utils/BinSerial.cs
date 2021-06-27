@@ -3,6 +3,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System.Reflection;
+using System.Windows.Forms;
 
 namespace Cacao.Utils
 {
@@ -10,12 +11,20 @@ namespace Cacao.Utils
     {
         public static byte[] Serializar(object aSerializar)
         {
-            MemoryStream memory = new MemoryStream();
-            BinaryFormatter formatter = new BinaryFormatter();
+            try
+            {
+                MemoryStream memory = new MemoryStream();
+                BinaryFormatter formatter = new BinaryFormatter();
 
-            formatter.Serialize(memory, aSerializar);
+                formatter.Serialize(memory, aSerializar);
 
-            return memory.ToArray();
+                return memory.ToArray();
+            }
+            catch(Exception e) {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+           
         }
 
         public static object Deserializar(byte[] data)

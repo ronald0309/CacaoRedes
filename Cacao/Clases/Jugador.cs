@@ -15,14 +15,14 @@ namespace Cacao.Clases
         private int edad;
         private string color;
         //Jugador.  juego se altera por cantidad de jugadores
-        private LTrabajador[] losetasTrabajadores;
+         [NonSerialized] private LTrabajador[] losetasTrabajadores;
         //por defecto
-        private Meeple meeple;
-        private TableroPoblado tableroPoblado;
-        private FCacao[] fichasCacao;
-        private FSol[] fichasSol;
-        private Moneda[] monedas;
-        public LTrabajador[] mazoMano = new LTrabajador[3];
+        [NonSerialized] private Meeple meeple;
+        [NonSerialized] private TableroPoblado tableroPoblado;
+        [NonSerialized] private FCacao[] fichasCacao;
+        [NonSerialized] private FSol[] fichasSol;
+        [NonSerialized] private Moneda[] monedas;
+        [NonSerialized] public LTrabajador[] mazoMano = new LTrabajador[3];
         public string Nombre
         {get { return nombre; }set { nombre = value; }}
         public int Edad

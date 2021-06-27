@@ -15,6 +15,8 @@ namespace Cacao
         Jugador jugador;
         public VistaCliente()
         {
+            this.jugador = new Jugador();
+
             InitializeComponent();
             Colores();
         }
@@ -32,12 +34,14 @@ namespace Cacao
         }
         private void actBtnUnirse(object sender, EventArgs e)
         {
-            jugador = new Jugador();
             if (ValidarDatos())
             {
-                Cliente cliente = new Cliente(txtIP.Text, 80);
+                
+                jugador = new Jugador("EL BICHO", 18, "Lima", 4);
+                Cliente cliente = new Cliente(txtIP.Text, 8080);
                 cliente.Start();
                 cliente.sendObject(jugador);
+
             }
         }
         private bool ValidarDatos()
@@ -54,7 +58,7 @@ namespace Cacao
             }
             if (txtNombre.Text.Length > 0)
             {
-                jugador.Nombre = txtNombre.Text;
+               // jugador.Nombre = txtNombre.Text;
                 contador++;
             }
             else

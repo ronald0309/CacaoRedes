@@ -1,18 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "PBkHP86bpPYPJjLLe+mSu54rAEQPDqd/OI3mQS7Ff1wmPC6OWJFKo+sGE094cISUNIUT00MXLUegby6+GbN7mw==",
+  "dgSpecHash": "g0oVmC6oDHHKpxKyzCPYUYtNqoO15ETqoRuSPH3wq89TLOwSKQkWnc8i3TBhawXkAO7lye7yD0pOLDc2wBCHzw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ronny\\Documents\\GitHub\\CacaoRedes\\Cacao\\Cacao.csproj",
+  "projectFilePath": "C:\\Users\\User\\Desktop\\CacaoRedes\\Cacao\\Cacao.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Ronny\\.nuget\\packages\\control.draggable\\1.0.5049.269\\control.draggable.1.0.5049.269.nupkg.sha512"
+    "C:\\Users\\User\\.nuget\\packages\\control.draggable\\1.0.5049.269\\control.draggable.1.0.5049.269.nupkg.sha512"
   ],
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché C:\\Users\\Ronny\\Documents\\GitHub\\CacaoRedes\\Cacao\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1701",
       "level": "Warning",

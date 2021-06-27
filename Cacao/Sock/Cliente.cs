@@ -11,8 +11,10 @@ using Cacao.Utils;
 using Cacao.Clases;
 namespace Cacao.Sock
 {
+    [Serializable]
     class Cliente
     {
+
         IPHostEntry host;
         IPAddress ipAddr;
         IPEndPoint endPoint;

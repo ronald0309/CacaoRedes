@@ -20,7 +20,6 @@ C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.csprojAssem
 C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.Properties.Resources.resources
 C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.Menu.resources
 C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.TableroPoblado.resources
-C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.VCliente.resources
 C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.VistaJuego.resources
 C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.csproj.GenerateResource.cache
 C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.AssemblyInfoInputs.cache
@@ -43,3 +42,5 @@ C:\Users\User\Desktop\CacaoRedes\Cacao\bin\Debug\netcoreapp3.1\Control.Draggable
 C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.csproj.CopyComplete
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\bin\Debug\netcoreapp3.1\Control.Draggable.dll
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.csproj.CopyComplete
+C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.VistaCliente.resources
+C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.Vistas.VistaServidor.resources

@@ -16,6 +16,8 @@ namespace Cacao.Vistas
         public VistaServidor()
         {
             InitializeComponent();
+
+            Clases.Singlenton.Instance.lblUsuarios = this.lblUsuarios;
         }
         private bool ValidarDatos()
         {
@@ -36,16 +38,33 @@ namespace Cacao.Vistas
             }
             return permiso;
         }
+        public void actualizarNombreJugadores() {
 
+            
+        }
         private void btnCrear_MouseClick(object sender, MouseEventArgs e)
         {
-            if (ValidarDatos())
+            try
             {
-                servidor = new Servidor(txtIP.Text, 80);
-                servidor.Start();
-                lblUsuarios.Text = servidor.RecibirJugador().Nombre;
+                if (ValidarDatos())
+                {
+                    servidor = new Servidor(txtIP.Text, 8080);
+                    //lblUsuarios.Text = servidor.jugadores[servidor.contador - 1].Nombre;
+                   
+                     servidor.Start();
+                     lblUsuarios.Text = servidor.clientReceive();
+
+                }
             }
+            catch (Exception exc) { 
+            
+            }
+           
         }
+
+       
+
+      
     }
 }
 

@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace Cacao.Clases
 {
+    [Serializable]
     class Meeple : PictureBox
     {
         private string color;

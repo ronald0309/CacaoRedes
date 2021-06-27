@@ -5,6 +5,7 @@ using System.Windows.Forms;
 
 namespace Cacao.Clases
 {
+    [Serializable]
     class LJungla : Loseta
     {
         public LJungla(string nombre, bool isOculta) : base(nombre, isOculta){

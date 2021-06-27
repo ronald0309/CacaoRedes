@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace Cacao.Clases
 {
+    [Serializable]
     class Partida
     {
         private Servidor server;

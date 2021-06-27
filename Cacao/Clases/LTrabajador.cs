@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace Cacao.Clases
 {
+    [Serializable]
     class LTrabajador : Loseta
     {
         private string color=""; 

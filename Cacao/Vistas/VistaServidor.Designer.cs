@@ -34,6 +34,7 @@ namespace Cacao.Vistas
             this.txtIP = new System.Windows.Forms.TextBox();
             this.btnIniciarPartida = new System.Windows.Forms.Button();
             this.lblUsuarios = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // lblIP
@@ -88,11 +89,21 @@ namespace Cacao.Vistas
             this.lblUsuarios.TabIndex = 21;
             this.lblUsuarios.Text = "Usuarios Conectados";
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(268, 411);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(207, 135);
+            this.listView1.TabIndex = 22;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // VistaServidor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.lblUsuarios);
             this.Controls.Add(this.btnIniciarPartida);
             this.Controls.Add(this.lblIP);
@@ -111,5 +122,6 @@ namespace Cacao.Vistas
         private System.Windows.Forms.TextBox txtIP;
         private System.Windows.Forms.Button btnIniciarPartida;
         private System.Windows.Forms.Label lblUsuarios;
+        private System.Windows.Forms.ListView listView1;
     }
 }
