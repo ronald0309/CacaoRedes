@@ -37,10 +37,9 @@ C:\Users\User\Desktop\CacaoRedes\Cacao\bin\Debug\netcoreapp3.1\Cacao.pdb
 C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.genruntimeconfig.cache
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.Vistas.TableroJuego.resources
 C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.Vistas.TableroJuego.resources
-
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.VistaCliente.resources
 C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.Vistas.VistaServidor.resources
-
 C:\Users\User\Desktop\CacaoRedes\Cacao\bin\Debug\netcoreapp3.1\Control.Draggable.dll
 C:\Users\User\Desktop\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.csproj.CopyComplete
-
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\bin\Debug\netcoreapp3.1\Control.Draggable.dll
+C:\Users\Ronny\Documents\GitHub\CacaoRedes\Cacao\obj\Debug\netcoreapp3.1\Cacao.csproj.CopyComplete

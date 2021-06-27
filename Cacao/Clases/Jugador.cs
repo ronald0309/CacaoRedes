@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace Cacao.Clases
 {
+    [Serializable]
     class Jugador{
         //Jugador datos
         private Cliente cliente;
@@ -21,7 +22,7 @@ namespace Cacao.Clases
         private FCacao[] fichasCacao;
         private FSol[] fichasSol;
         private Moneda[] monedas;
-        public  PictureBox[] masoMano = new LTrabajador[3];
+        public LTrabajador[] mazoMano = new LTrabajador[3];
         public string Nombre
         {get { return nombre; }set { nombre = value; }}
         public int Edad
@@ -65,11 +66,11 @@ namespace Cacao.Clases
                     
                     for (int j = 0; j < 3; j++)
                     {
-                        if (masoMano[j] == null)
+                        if (mazoMano[j] == null)
                         {
-                            masoMano[j] = new LTrabajador();
+                            mazoMano[j] = new LTrabajador();
 
-                            masoMano[j] = losetasTrabajadores[i];
+                            mazoMano[j] = losetasTrabajadores[i];
                             
                             losetasTrabajadores[i] = null;
                            

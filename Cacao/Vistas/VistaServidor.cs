@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace Cacao.Vistas
 {
+
     public partial class VistaServidor : Form
     {
         Servidor servidor;
@@ -38,8 +39,12 @@ namespace Cacao.Vistas
 
         private void btnCrear_MouseClick(object sender, MouseEventArgs e)
         {
-            servidor = new Servidor(txtIP.Text, 80);
-            servidor.Start();
+            if (ValidarDatos())
+            {
+                servidor = new Servidor(txtIP.Text, 80);
+                servidor.Start();
+                lblUsuarios.Text = servidor.RecibirJugador().Nombre;
+            }
         }
     }
 }

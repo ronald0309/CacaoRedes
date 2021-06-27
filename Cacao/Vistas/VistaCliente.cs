@@ -12,6 +12,7 @@ namespace Cacao
 {
     public partial class VistaCliente : Form
     {
+        Jugador jugador;
         public VistaCliente()
         {
             InitializeComponent();
@@ -31,11 +32,12 @@ namespace Cacao
         }
         private void actBtnUnirse(object sender, EventArgs e)
         {
+            jugador = new Jugador();
             if (ValidarDatos())
             {
                 Cliente cliente = new Cliente(txtIP.Text, 80);
                 cliente.Start();
-                cliente.recibirLoseta();
+                cliente.sendObject(jugador);
             }
         }
         private bool ValidarDatos()
@@ -44,6 +46,7 @@ namespace Cacao
             int contador = 0;
             if (txtIP.Text.Length > 0)
             {
+
                 contador++;
             }else
             {
@@ -51,6 +54,7 @@ namespace Cacao
             }
             if (txtNombre.Text.Length > 0)
             {
+                jugador.Nombre = txtNombre.Text;
                 contador++;
             }
             else

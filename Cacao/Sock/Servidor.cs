@@ -136,8 +136,22 @@ namespace Cacao.Sock
             if (recibido.IndexOf("<EOF>") > -1)
             {
                 recibido = recibido.Remove(recibido.Length - 5);
+                if (recibido == "Conectado" ) { 
+
+                }
+
             }
             return recibido;
+        }
+        public Jugador RecibirJugador()
+        {
+            string recibido = "";
+            Jugador l;
+            byte[] buffer = new byte[1024];
+            s_Client.Receive(buffer);
+            l = (Jugador)BinSerial.Deserializar(buffer);
+            MessageBox.Show(l.Nombre + "||" + l.Nombre);
+            return l;
         }
         public string byte2string(byte[] buffer,int bytesRec)
         {

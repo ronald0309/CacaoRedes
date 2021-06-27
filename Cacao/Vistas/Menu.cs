@@ -24,9 +24,9 @@ namespace Cacao
 
         private void ActCrear(object sender, EventArgs e)
         {
-            VistaServidor vCliente = new VistaServidor();
+            VistaServidor vServidor = new VistaServidor();
             this.Hide();
-            vCliente.ShowDialog();
+            vServidor.ShowDialog();
             this.Close();
 
         }

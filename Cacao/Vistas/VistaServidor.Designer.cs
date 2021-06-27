@@ -32,7 +32,8 @@ namespace Cacao.Vistas
             this.lblIP = new System.Windows.Forms.Label();
             this.btnUnirse = new System.Windows.Forms.Button();
             this.txtIP = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnIniciarPartida = new System.Windows.Forms.Button();
+            this.lblUsuarios = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblIP
@@ -67,23 +68,33 @@ namespace Cacao.Vistas
             this.txtIP.Size = new System.Drawing.Size(420, 26);
             this.txtIP.TabIndex = 11;
             // 
-            // button1
+            // btnIniciarPartida
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(772, 734);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(355, 39);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnIniciarPartida.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnIniciarPartida.Font = new System.Drawing.Font("Showcard Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnIniciarPartida.Location = new System.Drawing.Point(772, 808);
+            this.btnIniciarPartida.Name = "btnIniciarPartida";
+            this.btnIniciarPartida.Size = new System.Drawing.Size(355, 39);
+            this.btnIniciarPartida.TabIndex = 20;
+            this.btnIniciarPartida.Text = "Iniciar Juego ";
+            this.btnIniciarPartida.UseVisualStyleBackColor = false;
+            // 
+            // lblUsuarios
+            // 
+            this.lblUsuarios.Font = new System.Drawing.Font("Showcard Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblUsuarios.Location = new System.Drawing.Point(772, 613);
+            this.lblUsuarios.Name = "lblUsuarios";
+            this.lblUsuarios.Size = new System.Drawing.Size(355, 165);
+            this.lblUsuarios.TabIndex = 21;
+            this.lblUsuarios.Text = "Usuarios Conectados";
             // 
             // VistaServidor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblUsuarios);
+            this.Controls.Add(this.btnIniciarPartida);
             this.Controls.Add(this.lblIP);
             this.Controls.Add(this.btnUnirse);
             this.Controls.Add(this.txtIP);
@@ -98,6 +109,7 @@ namespace Cacao.Vistas
         private System.Windows.Forms.Label lblIP;
         private System.Windows.Forms.Button btnUnirse;
         private System.Windows.Forms.TextBox txtIP;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnIniciarPartida;
+        private System.Windows.Forms.Label lblUsuarios;
     }
 }

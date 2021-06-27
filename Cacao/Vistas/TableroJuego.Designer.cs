@@ -43,8 +43,7 @@ namespace Cacao.Vistas
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1428, 880);
-
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1430, 869);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.DragEnter += new System.Windows.Forms.DragEventHandler(this.Loseta_DragEnter);
             // 
@@ -56,9 +55,7 @@ namespace Cacao.Vistas
             this.Controls.Add(this.flowLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "TableroJuego";
-
-            this.Size = new System.Drawing.Size(1428, 880);
-
+            this.Size = new System.Drawing.Size(1429, 869);
             this.ResumeLayout(false);
             this.PerformLayout();
 

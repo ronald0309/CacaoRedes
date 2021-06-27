@@ -44,7 +44,7 @@ namespace Cacao
             this.tableroJuego1.Location = new System.Drawing.Point(450, 63);
             this.tableroJuego1.Margin = new System.Windows.Forms.Padding(0);
             this.tableroJuego1.Name = "tableroJuego1";
-            this.tableroJuego1.Size = new System.Drawing.Size(1431, 900);
+            this.tableroJuego1.Size = new System.Drawing.Size(1429, 869);
             this.tableroJuego1.TabIndex = 4;
             // 
             // label1
