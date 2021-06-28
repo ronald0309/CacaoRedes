@@ -87,10 +87,12 @@ namespace Cacao.Vistas
             // 
             // lblUsuarios
             // 
+            this.lblUsuarios.BackColor = System.Drawing.Color.Transparent;
             this.lblUsuarios.Font = new System.Drawing.Font("Showcard Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblUsuarios.ForeColor = System.Drawing.SystemColors.Control;
             this.lblUsuarios.Location = new System.Drawing.Point(743, 511);
             this.lblUsuarios.Name = "lblUsuarios";
-            this.lblUsuarios.Size = new System.Drawing.Size(355, 165);
+            this.lblUsuarios.Size = new System.Drawing.Size(417, 165);
             this.lblUsuarios.TabIndex = 21;
             this.lblUsuarios.Text = "Usuarios Conectados";
             // 
@@ -145,7 +147,7 @@ namespace Cacao.Vistas
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(355, 39);
             this.button1.TabIndex = 29;
-            this.button1.Text = "Iniciar Juego ";
+            this.button1.Text = "Prueba juego";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -153,6 +155,7 @@ namespace Cacao.Vistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Cacao.Properties.Resources.FondoMenu;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);

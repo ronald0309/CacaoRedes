@@ -1,11 +1,6 @@
 ﻿using Cacao.Clases;
 using Cacao.Utils;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Cacao
@@ -31,19 +26,18 @@ namespace Cacao
             this.fichaCacao = new FichaCacao[5];
             this.fichaSol = new FichaSol[3];
             cargarMapa();
-            moverMeeple(16);
+            moverMeeple(-10);
             actualizarFichasCacao(true);
             actualizarFichasCacao(true);
             actualizarFichasCacao(true);
             actualizarFichasCacao(true);
             actualizarFichasCacao(true);
             actualizarFichasSol(true);
-
             actualizarFichasSol(true);
             actualizarFichasSol(true);
             actualizarFichasSol(true);
             actualizarFichasSol(true);
-            actualizarFichasSol(false);
+            actualizarFichasSol(true);
             actualizarFichasSol(false);
             actualizarFichasSol(true);
 

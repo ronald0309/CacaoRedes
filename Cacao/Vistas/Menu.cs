@@ -18,17 +18,14 @@ namespace Cacao
     {
         public Menu()
         {
-            
             InitializeComponent();
-        }            
-
+        }
         private void ActCrear(object sender, EventArgs e)
         {
             VistaServidor vServidor = new VistaServidor();
             this.Hide();
             vServidor.ShowDialog();
             this.Close();
-
         }
 
         private void ActUnirse(object sender, EventArgs e)
