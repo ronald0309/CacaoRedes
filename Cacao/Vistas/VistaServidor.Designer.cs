@@ -34,7 +34,10 @@ namespace Cacao.Vistas
             this.txtIP = new System.Windows.Forms.TextBox();
             this.btnIniciarPartida = new System.Windows.Forms.Button();
             this.lblUsuarios = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.txtNombrePartida = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbxNumeroJugadores = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblIP
@@ -53,7 +56,7 @@ namespace Cacao.Vistas
             // 
             this.btnUnirse.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnUnirse.Font = new System.Drawing.Font("Showcard Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnUnirse.Location = new System.Drawing.Point(772, 543);
+            this.btnUnirse.Location = new System.Drawing.Point(743, 456);
             this.btnUnirse.Name = "btnUnirse";
             this.btnUnirse.Size = new System.Drawing.Size(355, 39);
             this.btnUnirse.TabIndex = 12;
@@ -73,37 +76,75 @@ namespace Cacao.Vistas
             // 
             this.btnIniciarPartida.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnIniciarPartida.Font = new System.Drawing.Font("Showcard Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnIniciarPartida.Location = new System.Drawing.Point(772, 808);
+            this.btnIniciarPartida.Location = new System.Drawing.Point(743, 882);
             this.btnIniciarPartida.Name = "btnIniciarPartida";
             this.btnIniciarPartida.Size = new System.Drawing.Size(355, 39);
             this.btnIniciarPartida.TabIndex = 20;
             this.btnIniciarPartida.Text = "Iniciar Juego ";
             this.btnIniciarPartida.UseVisualStyleBackColor = false;
+            this.btnIniciarPartida.Click += new System.EventHandler(this.btnIniciarPartida_Click);
             // 
             // lblUsuarios
             // 
             this.lblUsuarios.Font = new System.Drawing.Font("Showcard Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblUsuarios.Location = new System.Drawing.Point(772, 613);
+            this.lblUsuarios.Location = new System.Drawing.Point(743, 511);
             this.lblUsuarios.Name = "lblUsuarios";
             this.lblUsuarios.Size = new System.Drawing.Size(355, 165);
             this.lblUsuarios.TabIndex = 21;
             this.lblUsuarios.Text = "Usuarios Conectados";
             // 
-            // listView1
+            // txtNombrePartida
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(268, 411);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(207, 135);
-            this.listView1.TabIndex = 22;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.txtNombrePartida.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNombrePartida.Location = new System.Drawing.Point(740, 240);
+            this.txtNombrePartida.Name = "txtNombrePartida";
+            this.txtNombrePartida.Size = new System.Drawing.Size(420, 26);
+            this.txtNombrePartida.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(740, 204);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(316, 20);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Ingrese el nombre de la partida";
+            // 
+            // cbxNumeroJugadores
+            // 
+            this.cbxNumeroJugadores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxNumeroJugadores.Font = new System.Drawing.Font("Showcard Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbxNumeroJugadores.FormattingEnabled = true;
+            this.cbxNumeroJugadores.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.cbxNumeroJugadores.Location = new System.Drawing.Point(740, 333);
+            this.cbxNumeroJugadores.Name = "cbxNumeroJugadores";
+            this.cbxNumeroJugadores.Size = new System.Drawing.Size(420, 26);
+            this.cbxNumeroJugadores.TabIndex = 27;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Showcard Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(740, 290);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(493, 20);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Seleccione la cantidad de jugadores de la partida";
             // 
             // VistaServidor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbxNumeroJugadores);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtNombrePartida);
             this.Controls.Add(this.lblUsuarios);
             this.Controls.Add(this.btnIniciarPartida);
             this.Controls.Add(this.lblIP);
@@ -122,6 +163,9 @@ namespace Cacao.Vistas
         private System.Windows.Forms.TextBox txtIP;
         private System.Windows.Forms.Button btnIniciarPartida;
         private System.Windows.Forms.Label lblUsuarios;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.TextBox txtNombrePartida;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbxNumeroJugadores;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -38,6 +38,7 @@ namespace Cacao
             this.cbxColor = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.VerificarDatos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtIP
@@ -52,7 +53,7 @@ namespace Cacao
             // 
             this.btnUnirse.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnUnirse.Font = new System.Drawing.Font("Showcard Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.btnUnirse.Location = new System.Drawing.Point(783, 653);
+            this.btnUnirse.Location = new System.Drawing.Point(768, 670);
             this.btnUnirse.Name = "btnUnirse";
             this.btnUnirse.Size = new System.Drawing.Size(355, 39);
             this.btnUnirse.TabIndex = 1;
@@ -135,13 +136,23 @@ namespace Cacao
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(420, 26);
             this.dtpFechaNacimiento.TabIndex = 10;
             // 
-            // VCliente
+            // VerificarDatos
+            // 
+            this.VerificarDatos.Location = new System.Drawing.Point(862, 543);
+            this.VerificarDatos.Name = "VerificarDatos";
+            this.VerificarDatos.Size = new System.Drawing.Size(203, 32);
+            this.VerificarDatos.TabIndex = 11;
+            this.VerificarDatos.Text = "Verificar datos";
+            this.VerificarDatos.UseVisualStyleBackColor = true;
+            this.VerificarDatos.Click += new System.EventHandler(this.VerificarDatos_Click);
+            // 
+            // VistaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.VerificarDatos);
             this.Controls.Add(this.dtpFechaNacimiento);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbxColor);
@@ -152,7 +163,7 @@ namespace Cacao
             this.Controls.Add(this.btnUnirse);
             this.Controls.Add(this.txtIP);
             this.DoubleBuffered = true;
-            this.Name = "VCliente";
+            this.Name = "VistaCliente";
             this.Text = "Cacao";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -170,5 +181,6 @@ namespace Cacao
         private System.Windows.Forms.ComboBox cbxColor;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
+        private System.Windows.Forms.Button VerificarDatos;
     }
 }
