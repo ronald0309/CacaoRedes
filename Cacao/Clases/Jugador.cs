@@ -44,6 +44,23 @@ namespace Cacao.Clases
 
         public Jugador() { 
         }
+        public Jugador(string nombre, int edad, string color, int jugadores)
+        {
+
+            
+            this.nombre = nombre;
+            this.edad = edad;
+            this.color = color;
+            this.fichasCacao = new FCacao[5];
+            this.fichasSol = new FSol[3];
+            this.monedas = new Moneda[48];
+            this.tableroPoblado = new TableroPoblado(this.color);
+            this.meeple = new Meeple(this.color);
+
+            InicializarPorJugadores(jugadores);
+            CargarMasoMano();
+
+        }
         public Jugador(Cliente cliente, string nombre, int edad, string color) {
 
             this.cliente = cliente;

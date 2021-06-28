@@ -29,7 +29,7 @@ namespace Cacao.Clases
                 Location = new System.Drawing.Point(0, 0);
                 SizeMode = PictureBoxSizeMode.StretchImage;
                 SizeMode = PictureBoxSizeMode.Zoom;
-                Size = new System.Drawing.Size(150, 150);
+                Size = new System.Drawing.Size(79, 79);
 
             }
             catch (System.IO.FileNotFoundException e) {
@@ -78,7 +78,7 @@ namespace Cacao.Clases
                 Location = new System.Drawing.Point(0, 0);
                 SizeMode = PictureBoxSizeMode.StretchImage;
                 SizeMode = PictureBoxSizeMode.Zoom;
-                Size = new System.Drawing.Size(150, 150);
+                Size = new System.Drawing.Size(79, 79);
             }
             catch (System.IO.FileNotFoundException e){
                 MessageBox.Show("Error al cargar alguna imagen.");

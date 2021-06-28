@@ -34,6 +34,7 @@ namespace Cacao
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.flpMazoMano = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpLosetaJungla = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // tableroJuego1
@@ -69,10 +70,18 @@ namespace Cacao
             // 
             // flpMazoMano
             // 
-            this.flpMazoMano.Location = new System.Drawing.Point(1166, 962);
+            this.flpMazoMano.Location = new System.Drawing.Point(1166, 950);
             this.flpMazoMano.Name = "flpMazoMano";
-            this.flpMazoMano.Size = new System.Drawing.Size(356, 79);
+            this.flpMazoMano.Size = new System.Drawing.Size(240, 79);
             this.flpMazoMano.TabIndex = 7;
+            // 
+            // flpLosetaJungla
+            // 
+            this.flpLosetaJungla.Location = new System.Drawing.Point(503, 950);
+            this.flpLosetaJungla.Margin = new System.Windows.Forms.Padding(0);
+            this.flpLosetaJungla.Name = "flpLosetaJungla";
+            this.flpLosetaJungla.Size = new System.Drawing.Size(160, 79);
+            this.flpLosetaJungla.TabIndex = 8;
             // 
             // VistaJuego
             // 
@@ -80,6 +89,7 @@ namespace Cacao
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.flpLosetaJungla);
             this.Controls.Add(this.flpMazoMano);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tableroJuego1);
@@ -99,5 +109,6 @@ namespace Cacao
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.FlowLayoutPanel flpMazoMano;
+        private System.Windows.Forms.FlowLayoutPanel flpLosetaJungla;
     }
 }
