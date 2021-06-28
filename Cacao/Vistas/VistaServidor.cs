@@ -23,9 +23,10 @@ namespace Cacao.Vistas
             cantidadJugadores();
 
             Clases.Singlenton.Instance.lblUsuarios = this.lblUsuarios;
-            
+
         }
-        private void cantidadJugadores() {
+        private void cantidadJugadores()
+        {
             cbxNumeroJugadores.Items.Add(2);
             cbxNumeroJugadores.Items.Add(3);
             cbxNumeroJugadores.Items.Add(4);
@@ -45,7 +46,7 @@ namespace Cacao.Vistas
             }
             if (txtNombrePartida.Text.Length > 0)
             {
-               // partida.nombre = txtNombre.Text;
+                // partida.nombre = txtNombre.Text;
                 contador++;
             }
             else
@@ -57,13 +58,6 @@ namespace Cacao.Vistas
             {
                 Singlenton.Instance.CANTJUGADORES = Convert.ToInt32(cbxNumeroJugadores.SelectedItem.ToString());
 
-
-                //Singlenton.Instance.customDomain.SetData("numJug", numJug);
-                //AppDomain.setda
-                //AppContext.SetSwitch("num", Enabled);
-
-                //Singlenton.Instance.CANTJUGADORES = (this.cbxNumeroJugadores);
-                //l.Refresh();
                 contador++;
             }
             else
@@ -76,29 +70,26 @@ namespace Cacao.Vistas
             }
             return permiso;
         }
-    
+
         private void btnCrear_MouseClick(object sender, MouseEventArgs e)
         {
             //try
             //{
             if (ValidarDatos())
             {
-                servidor = new Servidor(txtIP.Text, 8080, Singlenton.Instance.CANTJUGADORES);
+                servidor = new Servidor(txtIP.Text, 80, Singlenton.Instance.CANTJUGADORES);
                 servidor.Start();
                 //Thread.Sleep(5);
                 lblUsuarios.Text = servidor.clientReceive();
 
             }
-            else {
-                MessageBox.Show("aqui" );
+            else
+            {
+                MessageBox.Show("aqui");
             }
-            }
-            //catch (Exception exc) {
+        }
 
-            //    MessageBox.Show("aqui"+exc.Message.ToString());
-            //}
-           
-        
+
         private void btnIniciarPartida_Click(object sender, EventArgs e)
         {
             try
@@ -108,10 +99,17 @@ namespace Cacao.Vistas
                     partida = new Partida(this.servidor, txtNombrePartida.Text, 0, this.servidor.jugadores);
                 }
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show("Faltan jugadores por ingresar");
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            VistaJuego vj = new VistaJuego();
+            vj.ShowDialog();
         }
     }
 }

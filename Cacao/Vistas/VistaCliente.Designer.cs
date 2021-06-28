@@ -138,12 +138,14 @@ namespace Cacao
             // 
             // VerificarDatos
             // 
-            this.VerificarDatos.Location = new System.Drawing.Point(862, 543);
+            this.VerificarDatos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.VerificarDatos.Font = new System.Drawing.Font("Showcard Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.VerificarDatos.Location = new System.Drawing.Point(768, 543);
             this.VerificarDatos.Name = "VerificarDatos";
-            this.VerificarDatos.Size = new System.Drawing.Size(203, 32);
+            this.VerificarDatos.Size = new System.Drawing.Size(355, 34);
             this.VerificarDatos.TabIndex = 11;
             this.VerificarDatos.Text = "Verificar datos";
-            this.VerificarDatos.UseVisualStyleBackColor = true;
+            this.VerificarDatos.UseVisualStyleBackColor = false;
             this.VerificarDatos.Click += new System.EventHandler(this.VerificarDatos_Click);
             // 
             // VistaCliente

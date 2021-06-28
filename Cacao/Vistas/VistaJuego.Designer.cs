@@ -96,7 +96,6 @@ namespace Cacao
             this.Controls.Add(this.label1);
             this.Name = "VistaJuego";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "VistaJuego";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -20,25 +20,19 @@ namespace Cacao
         public VistaJuego()
         {
 
-            numeroJugador = 2;
-            js[0] = new Jugador("Far",22,"Rojo",js.Length);
-            js[1] = new Jugador("Farlol", 22, "Azul", js.Length);
-            js[2] = new Jugador("Farrrrr", 12, "Blanco", js.Length);
-            js[3] = new Jugador("Farrr xdr", 12, "Lima", js.Length);
-
+            numeroJugador = 1;
+            js[0] = new Jugador("Esteban",22,"Rojo",js.Length);
+            js[1] = new Jugador("Farlen", 22, "Azul", js.Length);
+            js[2] = new Jugador("Ronny", 12, "Blanco", js.Length);
+            js[3] = new Jugador("El bromas", 12, "Lima", js.Length);
             p = new Partida(ss,"JAJA",0,js);
 
-            
+            this.Controls.Add(p.jugadores[numeroJugador].TPoblado);
             InitializeComponent();
-
-            
             inicializarMatrizJuego();
             cMazo();
             cLosetaJungla();
-            foreach (Control c in tableroJuego1.Controls) { 
-
-            //c.MouseUp += (sendr, EventArgs) => { control_mouse_al_soltar_mouse(sendr, EventArgs); };
-            }
+            
         }
 
                                                                             //INICIO MATRIZ TABLERO//
@@ -99,10 +93,10 @@ namespace Cacao
 
         private void cLosetaJungla()
         {
-            LJungla[] losetas = new LJungla[2];
+            LosetaJungla[] losetas = new LosetaJungla[2];
             int cont = 0;
             {
-                foreach (LJungla L in losetas)
+                foreach (LosetaJungla L in losetas)
                 {
 
                     if (L == null)
@@ -118,9 +112,6 @@ namespace Cacao
                                 losetas[cont].DragEnter += (sendr, EventArgs) => { control_mouse_al_arrastrar(sendr, EventArgs, 0, cont); };
                                 losetas[cont].MouseHover += (sendr, EventArgs) => { control_mouse_sobre(sendr, EventArgs); };
                                 losetas[cont].MouseLeave += (sendr, EventArgs) => { control_mouse_sale(sendr, EventArgs); };
-
-
-
                                 break;
                             }
                         }
@@ -137,10 +128,10 @@ namespace Cacao
 
         private void cargarLosetaJungla()
         {
-            LJungla[] losetas = new LJungla[2];
+            LosetaJungla[] losetas = new LosetaJungla[2];
             int cont = 0;
             {
-                foreach (LJungla L in flpLosetaJungla.Controls)
+                foreach (LosetaJungla L in flpLosetaJungla.Controls)
                 {
 
                     if (L.Image == null)
@@ -181,7 +172,7 @@ namespace Cacao
         private void cMazo() {
             int cont = 0;
             {
-                foreach (LTrabajador L in p.jugadores[numeroJugador].mazoMano)
+                foreach (LosetaTrabajador L in p.jugadores[numeroJugador].mazoMano)
                 {
 
                     if (L == null)
@@ -219,7 +210,7 @@ namespace Cacao
             
             int cont = 0;
             {
-                    foreach (LTrabajador L in flpMazoMano.Controls) {
+                    foreach (LosetaTrabajador L in flpMazoMano.Controls) {
 
                 if (L.Image == null) {
                     for (int i = 0; i < p.jugadores[numeroJugador].LosetasTrabajadores.Length; i++)

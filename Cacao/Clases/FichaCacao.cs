@@ -6,10 +6,10 @@ using System.Windows.Forms;
 namespace Cacao.Clases
 {
     [Serializable]
-    class FCacao : PictureBox
+    class FichaCacao : PictureBox
     {
         private static string urlImagen = "cacao.png";
-    public FCacao(){
+    public FichaCacao(){
             Load(Application.StartupPath + @"\Recursos\"+urlImagen);
             Location = new System.Drawing.Point(15, 15);
             SizeMode = PictureBoxSizeMode.CenterImage;

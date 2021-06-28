@@ -80,7 +80,6 @@ namespace Cacao
             }
             if (txtNombre.Text.Length > 0)
             {
-                //jugador.Nombre = txtNombre.Text;
                 contador++;
             }
             else
@@ -90,8 +89,6 @@ namespace Cacao
             }
             if (dtpFechaNacimiento.Value.Year < DateTime.Now.Date.Year)
             {
-                //(Me todo para calcular la edad)
-                //jugador .Edad = ?
                 contador++;
             }
             else
@@ -119,7 +116,7 @@ namespace Cacao
         {
             if (ValidarDatos())
             {
-                cliente = new Cliente(txtIP.Text, 8080);
+                cliente = new Cliente(txtIP.Text, 80);
                 cliente.Start();
                 cliente.Send("Cantidad jugadores");
                 Singlenton.Instance.CANTJUGADORES = Convert.ToInt32(cliente.serverReceive());

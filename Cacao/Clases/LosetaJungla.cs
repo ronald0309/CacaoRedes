@@ -6,9 +6,9 @@ using System.Windows.Forms;
 namespace Cacao.Clases
 {
     [Serializable]
-    class LJungla : Loseta
+    class LosetaJungla : Loseta
     {
-        public LJungla(string nombre, bool isOculta) : base(nombre, isOculta){
+        public LosetaJungla(string nombre, bool isOculta) : base(nombre, isOculta){
             voltearLoseta();
         }
         public void voltearLoseta()

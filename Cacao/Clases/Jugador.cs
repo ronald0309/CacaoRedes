@@ -15,14 +15,14 @@ namespace Cacao.Clases
         private int edad;
         private string color;
         //Jugador.  juego se altera por cantidad de jugadores
-        [NonSerialized] private LTrabajador[] losetasTrabajadores;
+        [NonSerialized] private LosetaTrabajador[] losetasTrabajadores;
         //por defecto
         [NonSerialized] private Meeple meeple;
         [NonSerialized] private TableroPoblado tableroPoblado;
-        [NonSerialized] private FCacao[] fichasCacao;
-        [NonSerialized] private FSol[] fichasSol;
+        [NonSerialized] private FichaCacao[] fichasCacao;
+        [NonSerialized] private FichaSol[] fichasSol;
         [NonSerialized] private Moneda[] monedas;
-        [NonSerialized] public LTrabajador[] mazoMano = new LTrabajador[3];
+        [NonSerialized] public LosetaTrabajador[] mazoMano = new LosetaTrabajador[3];
         public string Nombre
         {get { return nombre; }set { nombre = value; }}
         public int Edad
@@ -31,13 +31,13 @@ namespace Cacao.Clases
 
         public TableroPoblado TPoblado
         { get { return tableroPoblado; } set { tableroPoblado = value; } }
-        public LTrabajador[] LosetasTrabajadores
+        public LosetaTrabajador[] LosetasTrabajadores
         { get { return losetasTrabajadores; } set { losetasTrabajadores = value; } }
         public Meeple Meeple
         { get { return meeple; } set { meeple = value; } }
-        public FCacao[] FichasCacao
+        public FichaCacao[] FichasCacao
         { get { return fichasCacao; } set { fichasCacao = value; } }
-        public FSol[] FichasSol
+        public FichaSol[] FichasSol
         { get { return fichasSol; } set { fichasSol = value; } }
         public Moneda[] Monedas
         { get { return monedas; } set { monedas = value; } }
@@ -51,8 +51,8 @@ namespace Cacao.Clases
             this.nombre = nombre;
             this.edad = edad;
             this.color = color;
-            this.fichasCacao = new FCacao[5];
-            this.fichasSol = new FSol[3];
+            this.fichasCacao = new FichaCacao[5];
+            this.fichasSol = new FichaSol[3];
             this.monedas = new Moneda[48];
             this.tableroPoblado = new TableroPoblado(this.color);
             this.meeple = new Meeple(this.color);
@@ -67,8 +67,8 @@ namespace Cacao.Clases
             this.nombre = nombre;
             this.edad = edad;
             this.color = color;
-            this.fichasCacao = new FCacao[5];
-            this.fichasSol = new FSol[3];
+            this.fichasCacao = new FichaCacao[5];
+            this.fichasSol = new FichaSol[3];
             this.monedas = new Moneda[48];
             this.tableroPoblado = new TableroPoblado(this.color);
             this.meeple = new Meeple(this.color);
@@ -88,7 +88,7 @@ namespace Cacao.Clases
                     {
                         if (mazoMano[j] == null)
                         {
-                            mazoMano[j] = new LTrabajador();
+                            mazoMano[j] = new LosetaTrabajador();
 
                             mazoMano[j] = losetasTrabajadores[i];
                             
@@ -104,11 +104,11 @@ namespace Cacao.Clases
         
         private void InicializarPorJugadores(int cantidadJugadores){
             if (cantidadJugadores == 2) {
-                this.losetasTrabajadores = new LTrabajador[11];
+                this.losetasTrabajadores = new LosetaTrabajador[11];
             } else if (cantidadJugadores == 3) {
-                this.losetasTrabajadores = new LTrabajador[10];
+                this.losetasTrabajadores = new LosetaTrabajador[10];
             } else if (cantidadJugadores == 4) {
-                this.losetasTrabajadores = new LTrabajador[9];
+                this.losetasTrabajadores = new LosetaTrabajador[9];
             }
 
             //for (int i=0;i<mazoMano.Length;i++) {

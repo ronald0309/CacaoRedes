@@ -17,7 +17,7 @@ namespace Cacao
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VistaJuego());
+            Application.Run(new Menu());
         }
     }
 }

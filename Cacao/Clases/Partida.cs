@@ -11,17 +11,15 @@ namespace Cacao.Clases
     class Partida
     {
         public Servidor server;
-        //Cliente[] clientes; // ?? Seguro ??
         public string nombre;
         public int tiempo;
-        //int cantidadJugadores;
 
         public Jugador[] jugadores;
-        public LTrabajador[] losetasTrabajadores;
+        public LosetaTrabajador[] losetasTrabajadores;
         TableroPoblado[] tablerosPoblados;
-        public LJungla[] losetasJungla;
-        FCacao[] fichasCacao;
-        FSol[] fichasSol;
+        public LosetaJungla[] losetasJungla;
+        FichaCacao[] fichasCacao;
+        FichaSol[] fichasSol;
         Moneda[] monedas;
 
 
@@ -44,17 +42,14 @@ namespace Cacao.Clases
 
         private void crearJuego()
         {
-            //this.jugadores = new Jugador[this.cantidadJugadores];
-            this.losetasTrabajadores = new LTrabajador[44];
+            this.losetasTrabajadores = new LosetaTrabajador[44];
             this.tablerosPoblados = new TableroPoblado[4];
-            this.losetasJungla = new LJungla[28];
-            this.fichasCacao = new FCacao[20];
-            this.fichasSol = new FSol[12];
+            this.losetasJungla = new LosetaJungla[28];
+            this.fichasCacao = new FichaCacao[20];
+            this.fichasSol = new FichaSol[12];
             this.monedas = new Moneda[48];
             
             inicializarLosetasTrabajadores();
-            //inicializarMazoVisible();
-            //barajar(jugadores.Length);
             inicializarTablerosPoblados();
             inicializarLosetasJungla();
             inicializarFichasCacao();
@@ -102,7 +97,7 @@ namespace Cacao.Clases
                         posicionesCartasTrabajadores[2] = 0; posicionesCartasTrabajadores[3] = 0;
                     }
 
-                    losetasTrabajadores[contador] = new LTrabajador("Loseta Trabajador", false, jugadores[i].Color, posicionesCartasTrabajadores);
+                    losetasTrabajadores[contador] = new LosetaTrabajador("Loseta Trabajador", false, jugadores[i].Color, posicionesCartasTrabajadores);
 
                     contador += 1;
                 }
@@ -125,61 +120,61 @@ namespace Cacao.Clases
                 // Plantaciones simple x6
                 if (i < 6)
                 {
-                    losetasJungla[i] = new LJungla("plantacion simple", bandera);
+                    losetasJungla[i] = new LosetaJungla("plantacion simple", bandera);
                 }
                 else
                 // Plantaciones doble x2
                 if (i >= 6 && i < 8)
                 {
-                    losetasJungla[i] = new LJungla("plantacion doble", bandera);
+                    losetasJungla[i] = new LosetaJungla("plantacion doble", bandera);
                 }
                 else
                 // Mercado precio 2 x2
                 if (i >= 8 && i < 10)
                 {
-                    losetasJungla[i] = new LJungla("mercado 2", bandera);
+                    losetasJungla[i] = new LosetaJungla("mercado 2", bandera);
                 }
                 else
                 // Mercado precio 3 x4
                 if (i >= 10 && i < 14)
                 {
-                    losetasJungla[i] = new LJungla("mercado 3", bandera);
+                    losetasJungla[i] = new LosetaJungla("mercado 3", bandera);
                 }
                 else
                 // Mercado precio 4 x1
                 if (i >= 14 && i < 15)
                 {
-                    losetasJungla[i] = new LJungla("mercado 4", bandera);
+                    losetasJungla[i] = new LosetaJungla("mercado 4", bandera);
                 }
                 else
                 // Mina 1 x2
                 if (i >= 15 && i < 17)
                 {
-                    losetasJungla[i] = new LJungla("mina de oro 1", bandera);
+                    losetasJungla[i] = new LosetaJungla("mina de oro 1", bandera);
                 }
                 else
                 // Mina 2 x1
                 if (i >= 17 && i < 18)
                 {
-                    losetasJungla[i] = new LJungla("mina de oro 2", bandera);
+                    losetasJungla[i] = new LosetaJungla("mina de oro 2", bandera);
                 }
                 else
                 // Agua x3
                 if (i >= 18 && i < 21)
                 {
-                    losetasJungla[i] = new LJungla("agua", bandera);
+                    losetasJungla[i] = new LosetaJungla("agua", bandera);
                 }
                 else
                 //Adoracion al sol x2
                 if (i >= 21 && i < 23)
                 {
-                    losetasJungla[i] = new LJungla("adoracion al sol", bandera);
+                    losetasJungla[i] = new LosetaJungla("adoracion al sol", bandera);
                 }
                 else
                 // templos x5
                 if (i >= 23 && i < 28)
                 {
-                    losetasJungla[i] = new LJungla("templo", bandera);
+                    losetasJungla[i] = new LosetaJungla("templo", bandera);
                 }
             }
         }
@@ -189,14 +184,14 @@ namespace Cacao.Clases
         {
             for (int i = 0; i < 20; i++)
             {
-                fichasCacao[i] = new FCacao();
+                fichasCacao[i] = new FichaCacao();
             }
         }
         private void inicializarFichasSol()
         {
             for (int i = 0; i < 12; i++)
             {
-                fichasSol[i] = new FSol();
+                fichasSol[i] = new FichaSol();
             }
         }
         private void inicializarMonedas()
@@ -223,21 +218,9 @@ namespace Cacao.Clases
 
             }
         }
-        //public static void Shuffle<T>(IList<T> values)
-        //{
-        //    var n = values.Count;
-        //    var rnd = new Random();
-        //    for (int i = n - 1; i > 0; i--)
-        //    {
-        //        var j = rnd.Next(0, i);
-        //        var temp = values[i];
-        //        values[i] = values[j];
-        //        values[j] = temp;
-        //    }
-        //}
-        private LJungla[] eliminarLosetaJungla(LJungla[] lj, int posToDelete)
+        private LosetaJungla[] eliminarLosetaJungla(LosetaJungla[] lj, int posToDelete)
         {
-            LJungla[] ljungla = new LJungla[lj.Length - 1];
+            LosetaJungla[] ljungla = new LosetaJungla[lj.Length - 1];
             int cont = 0;
             int i = posToDelete;
             while (i < lj.Length - 1)
@@ -246,7 +229,7 @@ namespace Cacao.Clases
                 i++;
             }
             lj[lj.Length - 1] = null;
-            foreach (LJungla l in lj)
+            foreach (LosetaJungla l in lj)
             {
                 if (l != null)
                 {
@@ -257,9 +240,9 @@ namespace Cacao.Clases
             lj = ljungla;
             return lj;
         }
-        private LTrabajador[] eliminarLosetaTrabajdor(LTrabajador[] lj, int posToDelete)
+        private LosetaTrabajador[] eliminarLosetaTrabajdor(LosetaTrabajador[] lj, int posToDelete)
         {
-            LTrabajador[] ltrabajador = new LTrabajador[lj.Length - 1];
+            LosetaTrabajador[] ltrabajador = new LosetaTrabajador[lj.Length - 1];
             int cont = 0;
             int i = posToDelete;
             while (i < lj.Length - 1)
@@ -268,7 +251,7 @@ namespace Cacao.Clases
                 i++;
             }
             lj[lj.Length - 1] = null;
-            foreach (LTrabajador l in lj)
+            foreach (LosetaTrabajador l in lj)
             {
                 if (l != null)
                 {
@@ -320,20 +303,6 @@ namespace Cacao.Clases
 
             }
 
-
-
-            //} else 
-            ////actualizar juego para 3 jugadores
-            //if () {
-
-            //} else 
-            ////actualizar juego para 4 jugadores
-            //if (){
-
-            //}
-
-
-
         }
         // Barajar las cartas
         private void barajar(int numeroJugadores)
@@ -362,7 +331,7 @@ namespace Cacao.Clases
                 int segunda = numerosAleatorios.Next(numero);
                 if (losetasTrabajadores[segunda] != null && losetasTrabajadores[primera]!=null);
                 {
-                    LTrabajador temporal = losetasTrabajadores[primera];
+                    LosetaTrabajador temporal = losetasTrabajadores[primera];
                     losetasTrabajadores[primera] = losetasTrabajadores[segunda];
                     losetasTrabajadores[segunda] = temporal;
                 }
@@ -376,20 +345,13 @@ namespace Cacao.Clases
            
             for (int i = 0; i < this.jugadores.Length; i++)
             {int contador = 0;
-                //for (int j = 0; j < this.jugadores[i].LosetasTrabajadores.Length; j++)
-                //{
-                foreach (LTrabajador l in losetasTrabajadores)
+                foreach (LosetaTrabajador l in losetasTrabajadores)
                 {
                     
                     if (l != null && l.Colors == jugadores[i].Color && contador<jugadores[i].LosetasTrabajadores.Length)
                     {
-                        //MessageBox.Show(l.Colors);
-                        //MessageBox.Show("Tamaño de vector "+jugadores[i].LosetasTrabajadores.Length.ToString()+"    contador "+contador);
                         jugadores[i].LosetasTrabajadores[contador] = l;
                         contador += 1;
-                        //}
-
-
                     }
  
                 }

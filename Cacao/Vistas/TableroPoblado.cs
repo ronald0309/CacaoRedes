@@ -16,8 +16,8 @@ namespace Cacao
         string color;
         int oro;
         Meeple meeple;
-        FCacao[] fichaCacao;
-        FSol[] fichaSol;
+        FichaCacao[] fichaCacao;
+        FichaSol[] fichaSol;
         static string urlImagenVisible = "tablero";
         public TableroPoblado() { }
         public TableroPoblado(string color)
@@ -28,8 +28,8 @@ namespace Cacao
            
             this.color = color;
             this.meeple = new Meeple(this.color);
-            this.fichaCacao = new FCacao[5];
-            this.fichaSol = new FSol[3];
+            this.fichaCacao = new FichaCacao[5];
+            this.fichaSol = new FichaSol[3];
             cargarMapa();
             moverMeeple(16);
             actualizarFichasCacao(true);
@@ -50,9 +50,6 @@ namespace Cacao
 
             this.Location = new Point(15,100);
             InitializeComponent();
-            //Meeple m = new Meeple("Gris");
-            //tpoblado = new TPoblado("Gris",m);
-            //this.Controls.Add(tpoblado);
         }
 
         private void actualizarFichasCacao(bool v)
@@ -60,11 +57,10 @@ namespace Cacao
             for (int i = 0; i < fichaCacao.Length; i++){
                 if (v){
                     if (fichaCacao[i] == null){
-                        fichaCacao[i] = new FCacao();
+                        fichaCacao[i] = new FichaCacao();
 
                         this.fichaCacao[i].Location = obtenerPosFichaCacao(i);
                         this.fichaCacao[i].BackColor = Color.Transparent;
-                        //obtenerFocusAguador(v, meeple.Image);
                         this.fichaCacao[i].Parent = this;
                         if (i == 1) {
                             fichaCacao[i].Image.RotateFlip(RotateFlipType.Rotate90FlipY);
@@ -121,11 +117,10 @@ namespace Cacao
                 {
                     if (fichaSol[i] == null)
                     {
-                        fichaSol[i] = new FSol();
+                        fichaSol[i] = new FichaSol();
 
                         this.fichaSol[i].Location = obtenerPosFichasSol(i);
                         this.fichaSol[i].BackColor = Color.Transparent;
-                        //obtenerFocusAguador(v, meeple.Image);
                         this.fichaSol[i].Parent = this;
 
                         this.Controls.Add(this.fichaSol[i]);
@@ -174,32 +169,12 @@ namespace Cacao
         {
             this.oro = v;
             string meepleColor = "meeple" + Colores.seleccionarColor(this.color);
-           
-            //this.meeple.Size = p.Size;
-            //this.meeple.SizeMode = p.SizeMode;
             this.meeple.Location = obtenerFocusAguador(v);
 
             this.meeple.BackColor = Color.Transparent;
-
-            //obtenerFocusAguador(v, meeple.Image);
            this.meeple.Parent = this;
 
            this.Controls.Add(meeple);
-
-            //carga la imagen de los meples con el color y la distribucion correspondiente
-            //PictureBox m = new PictureBox();
-
-
-            //m.Load(Application.StartupPath + @"\Recursos\" + meepleColor + ".png");
-            //obtenerFocusAguador(v).Location = new System.Drawing.Point(0, 0);
-            //// m.SizeMode = PictureBoxSizeMode.CenterImage;
-            //obtenerFocusAguador(v).SizeMode = PictureBoxSizeMode.Zoom;
-            ////m.Height = this.Height ;
-            ////m.Width = this.Width ;
-            //obtenerFocusAguador(v).ClientSize = new Size(150, 150);
-            //obtenerFocusAguador(v).BackColor = Color.Transparent;
-
-            //obtenerFocusAguador(v).Parent = this;
         }
 
 

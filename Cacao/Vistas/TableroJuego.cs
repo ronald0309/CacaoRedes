@@ -62,37 +62,14 @@ namespace Cacao.Vistas
             }
         }
 
-        private void control_mouse_al_presionar(object sendr, MouseEventArgs e, int v)
-        {
-            //Mouse Down
-
-            //PictureBox pic = (PictureBox)sendr;
-            //Singlenton.Instance.SELECCIONADA = (LTr)sendr;
-
-
-            //if (e.Button == MouseButtons.Left)
-            //{
-            //    {
-            //        if (pic.Image != null)
-            //        {
-            //            pic.DoDragDrop(pic.Image, DragDropEffects.Move);
-
-            //        }
-            //    }
-            //}
-        }
-
+        
         private void ClickLoseta(object sender, EventArgs e)
         {
             
             if (Singlenton.Instance.SELECCIONADA != null)
             {
                 MessageBox.Show("Auch... Pinchaste la posición ["+ flowLayoutPanel1.Controls.GetChildIndex((PictureBox) sender)+"]");
-                //flowLayoutPanel1.Controls.Remove((Control)sender);
-                //flowLayoutPanel1.Refresh();
-                //flowLayoutPanel1.ResumeLayout();
-                flowLayoutPanel1.Controls.Add(Singlenton.Instance.SELECCIONADA);// .SetChildIndex(Singlenton.Instance.SELECCIONADA, flowLayoutPanel1.Controls.GetChildIndex((PictureBox)sender));
-               // Singlenton.Instance.SELECCIONADA.SeleccionarLoseta();
+                flowLayoutPanel1.Controls.Add(Singlenton.Instance.SELECCIONADA);
 
                 Singlenton.Instance.SELECCIONADA = null;
                 //VistaJuego.car

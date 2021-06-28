@@ -7,10 +7,10 @@ using System.Windows.Forms;
 namespace Cacao.Clases
 {
     [Serializable]
-    class FSol : PictureBox
+    class FichaSol : PictureBox
     {
         private static string urlImagen ="FichadeSol.png";
-        public FSol() {
+        public FichaSol() {
             Load(Application.StartupPath + @"\Recursos\"+urlImagen);
             Location = new System.Drawing.Point(15, 15);
             SizeMode = PictureBoxSizeMode.StretchImage;

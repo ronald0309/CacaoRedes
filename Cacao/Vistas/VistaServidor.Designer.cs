@@ -38,6 +38,7 @@ namespace Cacao.Vistas
             this.label1 = new System.Windows.Forms.Label();
             this.cbxNumeroJugadores = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblIP
@@ -136,11 +137,24 @@ namespace Cacao.Vistas
             this.label3.TabIndex = 28;
             this.label3.Text = "Seleccione la cantidad de jugadores de la partida";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Font = new System.Drawing.Font("Showcard Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(740, 953);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(355, 39);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Iniciar Juego ";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // VistaServidor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbxNumeroJugadores);
             this.Controls.Add(this.label1);
@@ -167,5 +181,6 @@ namespace Cacao.Vistas
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbxNumeroJugadores;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }
