@@ -12,18 +12,20 @@ namespace Cacao
 {
    public partial class VistaJuego : Form
     {
-        Servidor ss = new Servidor("192.168.100.45", 8080);
+        Servidor ss = new Servidor("192.168.100.45", 8080,4);
         Jugador[] js = new Jugador[4];
         Partida p;
         public int numeroJugador;
 
         public VistaJuego()
         {
+
             numeroJugador = 2;
             js[0] = new Jugador("Far",22,"Rojo",js.Length);
             js[1] = new Jugador("Farlol", 22, "Azul", js.Length);
             js[2] = new Jugador("Farrrrr", 12, "Blanco", js.Length);
             js[3] = new Jugador("Farrr xdr", 12, "Lima", js.Length);
+
             p = new Partida(ss,"JAJA",0,js);
 
             //flpMazoMano.Controls.Add(p.jugadores[0].LosetasTrabajadores[0]);

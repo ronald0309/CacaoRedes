@@ -53,7 +53,7 @@ namespace Cacao.Sock
 
                     s_Client.Connect(endPoint);
                     aviso = "Conexión establecida.";
-                    MessageBox.Show("Conexión establecida correctamente.");
+                    MessageBox.Show("Conexión establecida correctamente."+Singlenton.Instance.CANTJUGADORES);
 
                     return aviso;
                 }

@@ -27,22 +27,43 @@ namespace Cacao
             cbxColor.Items.Add("Azul");
             cbxColor.Items.Add("Celeste");
             cbxColor.Items.Add("Verde");
-            cbxColor.Items.Add("Verde claro");
-            cbxColor.Items.Add("Verde oscuro");
+            cbxColor.Items.Add("Verde Claro");
+            cbxColor.Items.Add("Verde Oscuro");
             cbxColor.Items.Add("Rojo");
             cbxColor.Items.Add("Amarillo");
         }
+        int accion = 1;
+        private Cliente cliente;
         private void actBtnUnirse(object sender, EventArgs e)
         {
-            if (ValidarDatos())
-            {
-                
-                jugador = new Jugador("EL BICHO", 18, "Lima", 4);
-                Cliente cliente = new Cliente(txtIP.Text, 8080);
-                cliente.Start();
-                cliente.sendObject(jugador);
 
-            }
+            //cliente.();
+            Cliente nuevoCliente = new Cliente(txtIP.Text, 8080);
+            jugador = new Jugador(nuevoCliente, txtNombre.Text, 18, cbxColor.SelectedItem.ToString());
+            jugador.cliente.Start();
+            jugador.cliente.sendObject(jugador);
+            //bool bandera = false;
+            //accion = 1;
+            //if (ValidarDatos() && bandera == false){
+            //    if (accion == 1) { 
+
+            //    cliente.Send("Número de jugadores");
+            //    cliente.serverReceive();
+            //        accion += 1;
+            //    }
+            //    if (accion == 2) { 
+
+
+
+
+
+
+
+
+
+            //}
+
+
         }
         private bool ValidarDatos()
         {
@@ -52,13 +73,14 @@ namespace Cacao
             {
 
                 contador++;
-            }else
+            }
+            else
             {
                 MessageBox.Show("Ingrese una dirección IP");
             }
             if (txtNombre.Text.Length > 0)
             {
-               // jugador.Nombre = txtNombre.Text;
+                //jugador.Nombre = txtNombre.Text;
                 contador++;
             }
             else
@@ -66,8 +88,10 @@ namespace Cacao
                 MessageBox.Show("Ingrese un nombre");
 
             }
-            if(dtpFechaNacimiento.Value.Year< DateTime.Now.Date.Year)
+            if (dtpFechaNacimiento.Value.Year < DateTime.Now.Date.Year)
             {
+                //(Me todo para calcular la edad)
+                //jugador .Edad = ?
                 contador++;
             }
             else
@@ -76,6 +100,8 @@ namespace Cacao
             }
             if (cbxColor.Text.Length > 0)
             {
+                jugador.Color = cbxColor.SelectedItem.ToString();
+
                 contador++;
             }
             else
@@ -87,6 +113,18 @@ namespace Cacao
                 permiso = true;
             }
             return permiso;
+        }
+
+        private void VerificarDatos_Click(object sender, EventArgs e)
+        {
+            if (ValidarDatos())
+            {
+                cliente = new Cliente(txtIP.Text, 8080);
+                cliente.Start();
+                cliente.Send("Cantidad jugadores");
+                Singlenton.Instance.CANTJUGADORES = Convert.ToInt32(cliente.serverReceive());
+
+            }
         }
     }
 }

@@ -22,12 +22,18 @@ namespace Cacao.Clases
             }
         }
 
+        //public Dictionary<string, object> variables = new Dictionary<string, object>(); 
+
+        // public int CANTIDADJUGADORES { get; internal set; }
+
+        //public AppDomain customDomain;
+
         //public Jugador nj = new Jugador("J", 10, "rojo", 3);
         public LTrabajador SELECCIONADA = null;
         public bool fueMovida = true;
 
+        public int CANTJUGADORES;
         public Label lblUsuarios;
-
-
+        //public Partida PARTIDAACTUAL;
     }
 }

@@ -10,10 +10,10 @@ namespace Cacao.Clases
     [Serializable]
     class Partida
     {
-        private Servidor server;
+        public Servidor server;
         //Cliente[] clientes; // ?? Seguro ??
-        string nombre;
-        int tiempo;
+        public string nombre;
+        public int tiempo;
         //int cantidadJugadores;
 
         public Jugador[] jugadores;

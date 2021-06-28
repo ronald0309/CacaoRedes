@@ -23,19 +23,23 @@ namespace Cacao.Sock
 
         string data;
 
+        int request = 0;
 
         public Jugador[] jugadores;
         public int contador =0;
 
-        public Servidor(string ip, int port)
+        public int cantidadJugadores;
+
+        public Servidor(string ip, int port, int cantJugadores)
         {
-            jugadores = new Jugador[4];
+            this.cantidadJugadores = cantJugadores;
+            jugadores = new Jugador[cantidadJugadores];
             try
             {
                 host = Dns.GetHostEntry(ip);
                 ipAddr = host.AddressList[0];
                 endPoint = new IPEndPoint(ipAddr, port);
-                MessageBox.Show(host.AddressList[0].ToString());
+                //MessageBox.Show(host.AddressList[0].ToString());
                 // Create a TCP/IP socket.  
                 s_Server = new Socket(ipAddr.AddressFamily,
                 SocketType.Stream, ProtocolType.Tcp);
@@ -52,7 +56,9 @@ namespace Cacao.Sock
             // Data buffer for incoming data.  
             //byte[] bytes;
             //data = null;
+            //s_Server.Shutdown(SocketShutdown.Both);
 
+            
             try
             {
                 s_Server.Bind(endPoint);
@@ -63,7 +69,7 @@ namespace Cacao.Sock
                 while (true){
 
                     //bytes = new byte[1024];
-                    MessageBox.Show("Esperando una conexión...");
+                    //MessageBox.Show("Esperando una conexión...");
                     //El programa espera acá, mientras le llega una solicitud de conexión
                     MessageBox.Show("Esperando conexion");
                     s_Client = s_Server.Accept();
@@ -72,32 +78,46 @@ namespace Cacao.Sock
                     data = null;
                     while (true)
                     {
+
+
                         //validaciones, qué sucede si hay conexion? qué pregunta, envia o recibe el server? todo aquí.
                         //s_Client.Receive(bytes);
                         try {
-                            jugadores[contador] = new Jugador();
                             //jugadores[contador] = new Jugador();
-                            jugadores[contador] = RecibirJugador();
-                            Singlenton.Instance.lblUsuarios.Text = jugadores[contador].Nombre;
-                            Singlenton.Instance.lblUsuarios.Refresh();
-                           contador += 1;
-                            //s_Client.Send(BinSerial.Serializar(nombre));
-                            //Singlenton.Instance.lblUsuarios.Text = "";
-                            break;
+                            //jugadores[contador] = new Jugador();
+
+                            if (request == 0) {
+                                clientReceive();
+                                Send(this.cantidadJugadores.ToString());
+                                request++;
+                                break;
+                            }
+                            if (request == 1) {
+                                jugadores[contador] = new Jugador();
+                                jugadores[contador] = RecibirJugador();
+                                Singlenton.Instance.lblUsuarios.Text += "\n" + contador.ToString() + "-) " + jugadores[contador].Nombre;
+                                Singlenton.Instance.lblUsuarios.Refresh();
+                                contador = 0;
+                                //s_Client.Send(BinSerial.Serializar(nombre));
+                                //Singlenton.Instance.lblUsuarios.Text = "";
+                                break;
+                            }
+                            
                         }
-                        catch (Exception e) { 
+                        catch (Exception e) {
+                            
                         }
                         
 
 
-                        Loseta l = recibirLoseta(s_Client);
-                        if (l.IsOculta) {
-                            //Loseta l = new Loseta("Loseta 1", 3);
-                            //MessageBox.Show(datos);
-                            l.Nombre = "Loseta recibida";
-                            s_Client.Send(BinSerial.Serializar(l));
-                            continue;
-                        }
+                        //Loseta l = recibirLoseta(s_Client);
+                        //if (l.IsOculta) {
+                        //    //Loseta l = new Loseta("Loseta 1", 3);
+                        //    //MessageBox.Show(datos);
+                        //    l.Nombre = "Loseta recibida";
+                        //    s_Client.Send(BinSerial.Serializar(l));
+                        //    continue;
+                        //}
                         //break;
                     }
                     Console.WriteLine("Text received : {0}", data);
@@ -108,12 +128,30 @@ namespace Cacao.Sock
                 MessageBox.Show(e.ToString());
                 //Console.WriteLine(e.ToString());
             }
-
             Console.WriteLine("\nPress ENTER to continue...");
             Console.Read();
         }
 
-       
+        
+
+        
+
+        public bool IniciarPartida() {
+            if (jugadores.Length == this.cantidadJugadores)
+            {
+                asignarPosicionJugador();
+                return true;
+            }
+            else {
+                return false;
+            }
+
+        }
+
+        private void asignarPosicionJugador()
+        {
+            
+        }
 
         public void Send(string msj)
         {
@@ -165,10 +203,10 @@ namespace Cacao.Sock
         {
             string recibido = "";
             Jugador l;
-            byte[] buffer = new byte[2048];
+            byte[] buffer = new byte[1024];
             s_Client.Receive(buffer);
             l = (Jugador)BinSerial.Deserializar(buffer);
-            MessageBox.Show(l.Nombre + "||" + l.Nombre);
+            //MessageBox.Show(l.Nombre + "||" + l.Nombre);
             return l;
         }
         public string byte2string(byte[] buffer,int bytesRec)

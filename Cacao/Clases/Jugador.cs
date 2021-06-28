@@ -1,4 +1,5 @@
 ﻿using Cacao.Sock;
+using Cacao.Utils;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,13 +10,12 @@ namespace Cacao.Clases
     [Serializable]
     class Jugador{
         //Jugador datos
-        private Cliente cliente;
-        private int numeroJugador;
+        [NonSerialized] public Cliente cliente;
         private string nombre;
         private int edad;
         private string color;
         //Jugador.  juego se altera por cantidad de jugadores
-         [NonSerialized] private LTrabajador[] losetasTrabajadores;
+        [NonSerialized] private LTrabajador[] losetasTrabajadores;
         //por defecto
         [NonSerialized] private Meeple meeple;
         [NonSerialized] private TableroPoblado tableroPoblado;
@@ -44,8 +44,9 @@ namespace Cacao.Clases
 
         public Jugador() { 
         }
-        public Jugador(string nombre, int edad, string color, int cantidadJugadores) {
+        public Jugador(Cliente cliente, string nombre, int edad, string color) {
 
+            this.cliente = cliente;
             this.nombre = nombre;
             this.edad = edad;
             this.color = color;
@@ -54,7 +55,9 @@ namespace Cacao.Clases
             this.monedas = new Moneda[48];
             this.tableroPoblado = new TableroPoblado(this.color);
             this.meeple = new Meeple(this.color);
-            InicializarPorJugadores(cantidadJugadores);
+
+            int c = Singlenton.Instance.CANTJUGADORES;
+            InicializarPorJugadores(c);
             CargarMasoMano();
 
         }
